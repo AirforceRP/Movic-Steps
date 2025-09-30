@@ -10,22 +10,66 @@ import SwiftData
 
 @main
 struct Movic_StepsApp: App {
+    @StateObject private var notificationManager = NotificationManager.shared
+    @StateObject private var goalTracker = GoalTracker.shared
+    @StateObject private var loadingStateManager = LoadingStateManager()
+    @StateObject private var localizationManager = LocalizationManager.shared
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            StepData.self,
+            HealthGoal.self,
+            HealthInsight.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
         do {
             return try ModelContainer(for: schema, configurations: [modelConfiguration])
         } catch {
-            fatalError("Could not create ModelContainer: \(error)")
+            print("❌ Could not create ModelContainer: \(error)")
+            print("🔄 Falling back to in-memory storage...")
+            
+            // Fallback to in-memory storage if persistent storage fails
+            let fallbackConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: true)
+            do {
+                return try ModelContainer(for: schema, configurations: [fallbackConfiguration])
+            } catch {
+                print("❌ Could not create fallback ModelContainer: \(error)")
+                // Last resort: create a minimal container
+                return try! ModelContainer(for: schema, configurations: [ModelConfiguration(schema: schema, isStoredInMemoryOnly: true)])
+            }
         }
     }()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack {
+                if loadingStateManager.isLoading {
+                    LoadingScreen()
+                        .transition(.opacity)
+                        .onAppear {
+                            // Let the LoadingScreen control its own timing
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 4.5) {
+                                withAnimation(.easeInOut(duration: 0.5)) {
+                                    loadingStateManager.isLoading = false
+                                }
+                            }
+                        }
+                } else {
+                    ContentView()
+                        .environmentObject(notificationManager)
+                        .environmentObject(goalTracker)
+                        .environmentObject(localizationManager)
+                        .transition(.opacity)
+                }
+            }
+            .environmentObject(loadingStateManager)
+            .onAppear {
+                // Request notification permissions on app launch
+                if !notificationManager.isAuthorized {
+                    notificationManager.requestAuthorization()
+                }
+            }
         }
         .modelContainer(sharedModelContainer)
     }
