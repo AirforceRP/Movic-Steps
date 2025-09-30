@@ -1,0 +1,236 @@
+/* 
+  Localizable.strings
+  Movic Steps
+  
+  English (Base) Localization
+*/
+
+// MARK: - App General
+"app_name" = "Movic Steps"; // App name displayed in UI
+"app_tagline" = "Your Health Journey Starts Here"; // App tagline or subtitle
+
+// MARK: - Navigation
+"nav_steps" = "Steps"; // Tab bar label for steps tracking
+"nav_insights" = "Insights"; // Tab bar label for health insights
+"nav_goals" = "Goals"; // Tab bar label for goals management
+"nav_trends" = "Trends"; // Tab bar label for trends and analytics
+"nav_settings" = "Settings"; // Tab bar label for app settings
+
+// MARK: - Dashboard
+"dashboard_title" = "Today's Activity"; // Main dashboard header
+"steps_today" = "Steps Today"; // Today's step count label
+"via_healthkit" = "via HealthKit"; // Data source indicator for HealthKit
+"via_accelerometer" = "via Accelerometer"; // Data source indicator for accelerometer
+"goal_label" = "Goal"; // Goal progress label
+"complete_label" = "Complete"; // Completion status label
+"steps_label" = "steps"; // Unit label for step count
+
+// MARK: - Metrics
+"distance_title" = "Distance"; // Distance metric card title
+"calories_title" = "Calories"; // Calories burned metric card title
+"active_time_title" = "Active Time"; // Active minutes metric card title
+"pace_title" = "Pace"; // Walking pace metric card title
+"min_label" = "min"; // Minutes unit abbreviation
+"steps_per_min" = "steps/min"; // Steps per minute unit
+
+// MARK: - Step Tracking
+"step_tracking_source" = "Step Tracking Source"; // Settings label for tracking source selection
+"real_time_tracking" = "Real-time accelerometer tracking"; // Description of accelerometer tracking
+"active_status" = "Active"; // Status indicator when tracking is active
+"detecting_status" = "Detecting"; // Status indicator when detecting movement
+
+// MARK: - Quick Actions
+"quick_actions" = "Quick Actions"; // Section header for quick action buttons
+"refresh_data" = "Refresh Data"; // Button to refresh health data
+"start_tracking" = "Start Tracking"; // Button to start step tracking
+"stop_tracking" = "Stop Tracking"; // Button to stop step tracking
+"reset_steps" = "Reset Steps"; // Button to reset step count
+"calibrate" = "Calibrate"; // Button to calibrate step counter
+"set_goal" = "Set Goal"; // Button to set new goal
+"view_history" = "View History"; // Button to view historical data
+
+// MARK: - Goals
+"goals_title" = "Goals"; // Goals section header
+"add_goal" = "Add Goal"; // Button to add new goal
+"edit_goal" = "Edit Goal"; // Button to edit existing goal
+"delete_goal" = "Delete Goal"; // Button to delete goal
+"daily_goal" = "Daily Goal"; // Daily goal type label
+"weekly_goal" = "Weekly Goal"; // Weekly goal type label
+"monthly_goal" = "Monthly Goal"; // Monthly goal type label
+"goal_type" = "Goal Type"; // Goal type selection label
+"target_value" = "Target Value"; // Target value input label
+"save_goal" = "Save Goal"; // Button to save goal
+"cancel" = "Cancel"; // Cancel button label
+"delete" = "Delete"; // Delete button label
+"edit" = "Edit"; // Edit button label
+
+// MARK: - Trends
+"trends_title" = "Trends"; // Trends screen title
+"daily" = "Daily"; // Daily time period filter
+"weekly" = "Weekly"; // Weekly time period filter
+"monthly" = "Monthly"; // Monthly time period filter
+"yearly" = "Yearly"; // Yearly time period filter
+"steps_trend" = "Steps Trend"; // Steps trend chart title
+"distance_trend" = "Distance Trend"; // Distance trend chart title
+"calories_trend" = "Calories Trend"; // Calories trend chart title
+"active_time_trend" = "Active Time Trend"; // Active time trend chart title
+
+// MARK: - Insights
+"insights_title" = "Health Insights"; // Health insights screen title
+"achievements" = "Achievements"; // Achievements section label
+"past_achievements" = "Past Achievements"; // Past achievements section label
+"insights_description" = "Discover patterns in your health data"; // Insights section description
+
+// MARK: - Settings
+"settings_title" = "Settings";
+"notifications" = "Notifications";
+"weekly_reports" = "Weekly Reports";
+"unit_system" = "Unit System";
+"metric" = "Metric";
+"imperial" = "Imperial";
+"color_blindness" = "Color Blindness Support";
+"none" = "None";
+"protanopia" = "Protanopia";
+"deuteranopia" = "Deuteranopia";
+"tritanopia" = "Tritanopia";
+"faq" = "FAQ";
+"contact_support" = "Contact Support";
+"email_support" = "Email Support";
+"privacy_policy" = "Privacy Policy";
+"terms_of_service" = "Terms of Service";
+
+// MARK: - Permissions
+"health_permission_title" = "Health Data Access"; // Health permission alert title
+"health_permission_message" = "Enable HealthKit to track your steps and health metrics automatically."; // Health permission alert message
+"grant_access" = "Grant Access"; // Button to grant HealthKit access
+"permission_required" = "Permission Required"; // Generic permission required message
+
+// MARK: - Alerts & Messages
+"goal_deleted" = "Goal Deleted"; // Alert title for goal deleted
+"goal_deleted_message" = "Your goal has been deleted successfully."; // Alert message for goal deleted
+"goal_saved" = "Goal Saved"; // Alert title for goal saved
+"goal_saved_message" = "Your goal has been saved successfully."; // Alert message for goal saved
+"error_occurred" = "Error Occurred"; // Generic error alert title
+"try_again" = "Try Again"; // Button to try again
+"ok" = "OK"; // Generic OK button
+
+// MARK: - Time Periods
+"today" = "Today"; // Time period: Today
+"yesterday" = "Yesterday"; // Time period: Yesterday
+"this_week" = "This Week"; // Time period: This Week
+"last_week" = "Last Week"; // Time period: Last Week
+"this_month" = "This Month"; // Time period: This Month
+"last_month" = "Last Month"; // Time period: Last Month
+"this_year" = "This Year"; // Time period: This Year
+"last_year" = "Last Year"; // Time period: Last Year
+
+// MARK: - Loading
+"loading" = "Loading..."; // Generic loading message
+"initializing" = "Initializing..."; // Loading message: Initializing
+"loading_health_data" = "Loading Health Data..."; // Loading message: Loading Health Data
+"setting_up_notifications" = "Setting up Notifications..."; // Loading message: Setting up Notifications
+"preparing_interface" = "Preparing Interface..."; // Loading message: Preparing Interface
+"almost_ready" = "Almost Ready..."; // Loading message: Almost Ready
+"ready" = "Ready!"; // Loading message: Ready
+
+// MARK: - Chatbot
+"chatbot_title" = "Help & Support"; // Chatbot screen title
+"chatbot_placeholder" = "Ask me anything about Movic Steps..."; // Chatbot input placeholder
+"send" = "Send"; // Chatbot send button
+
+// MARK: - Settings Sections
+"units_display" = "Units & Display"; // Settings section for units and display options
+"language" = "Language"; // Settings section for language selection
+"appearance" = "Appearance"; // Settings section for theme and visual options
+"personal_information" = "Personal Information"; // Settings section for user data
+"goals" = "Goals"; // Settings section for goal preferences
+"step_tracking" = "Step Tracking"; // Settings section for tracking options
+"notifications" = "Notifications"; // Settings section for notification preferences
+"accessibility" = "Accessibility"; // Settings section for accessibility options
+"frequently_asked_questions" = "Frequently Asked Questions"; // Settings section for FAQ
+"about" = "About"; // Settings section for app information
+
+// MARK: - Settings Labels
+"unit_system" = "Unit System"; // Label for unit system selection (metric/imperial)
+"distance" = "Distance"; // Label for distance unit display
+"weight" = "Weight"; // Label for weight input field
+"height" = "Height"; // Label for height input field
+"language_selection" = "Language Selection"; // Label for language selection button
+"theme" = "Theme"; // Label for theme selection
+"haptic_feedback" = "Haptic Feedback"; // Label for haptic feedback toggle
+"enable_sounds" = "Enable Sounds"; // Label for sound effects toggle
+"daily_step_goal" = "Daily Step Goal"; // Label for daily step goal setting
+"daily_steps" = "Daily Steps"; // Label for daily steps display
+"preferred_source" = "Preferred Source"; // Label for step tracking source selection
+"step_sensitivity" = "Step Sensitivity"; // Label for step detection sensitivity
+"calibration_factor" = "Calibration Factor"; // Label for calibration adjustment
+"adjust_accuracy" = "Adjust to fine-tune step counting accuracy"; // Help text for calibration
+"enable_notifications" = "Enable Notifications"; // Label for notification toggle
+"permission_required" = "Permission Required"; // Alert title for missing permissions
+"allow_notifications" = "Please allow notifications in Settings"; // Permission request message
+"settings" = "Settings"; // Generic settings label
+"goal_reminder" = "Goal Reminder"; // Label for goal reminder time selection
+"weekly_progress_report" = "Weekly Progress Report"; // Label for weekly report toggle
+
+// MARK: - Accessibility
+"voiceover_support" = "VoiceOver Support"; // Label for VoiceOver support toggle
+"voiceover_hint" = "Enables enhanced VoiceOver support throughout the app"; // VoiceOver toggle description
+"reduce_motion" = "Reduce Motion"; // Label for reduce motion toggle
+"reduce_motion_hint" = "Reduces animations and motion effects"; // Reduce motion description
+"high_contrast" = "High Contrast"; // Label for high contrast toggle
+"high_contrast_hint" = "Increases contrast for better visibility"; // High contrast description
+"large_text" = "Large Text"; // Label for large text toggle
+"large_text_hint" = "Enables larger text throughout the app"; // Large text description
+"bold_text" = "Bold Text"; // Label for bold text toggle
+"bold_text_hint" = "Makes text bold for better readability"; // Bold text description
+"text_size" = "Text Size"; // Label for text size picker
+"text_size_hint" = "Adjusts the base text size throughout the app"; // Text size description
+"color_vision" = "Color Vision"; // Label for color vision picker
+"color_vision_hint" = "Adjusts colors for different types of color vision"; // Color vision description
+"open_system_accessibility" = "Open System Accessibility Settings"; // Button to open iOS accessibility settings
+"accessibility_hint" = "Opens iOS accessibility settings"; // Accessibility button description
+"accessibility_preview" = "Accessibility Preview"; // Label for accessibility preview section
+"sample_text" = "Sample Text"; // Sample text in accessibility preview
+"demo_button" = "Demo Button"; // Demo button in accessibility preview
+"preview_description" = "This preview updates based on your accessibility settings above"; // Accessibility preview description
+
+// MARK: - About Section
+"version" = "Version"; // App version label
+"build" = "Build"; // App build number label
+"view_faqs" = "View FAQs"; // Button to view frequently asked questions
+"contact_support" = "Contact Support"; // Button to contact support
+"privacy_policy" = "Privacy Policy"; // Button to view privacy policy
+"terms_of_service" = "Terms of Service"; // Button to view terms of service
+
+// MARK: - Calibration
+"step_calibration" = "Step Calibration"; // Calibration screen title
+"calibration_description" = "Improve accuracy by calibrating your step counter"; // Calibration description
+"instruction_1" = "Find a clear path where you can walk freely"; // Calibration instruction step 1
+"instruction_2" = "Hold your phone naturally while walking"; // Calibration instruction step 2
+"instruction_3" = "Walk exactly the number of steps you specify"; // Calibration instruction step 3
+"instruction_4" = "We'll compare your actual steps to detected steps"; // Calibration instruction step 4
+"start_calibration" = "Start Calibration"; // Button to start calibration process
+
+// MARK: - Email Support
+"email_support_title" = "Email Support"; // Email support screen title
+"email_support_description" = "This will open your email app with a pre-filled message to our support team."; // Email support description
+"subject" = "Subject"; // Email subject field label
+"support_request_subject" = "Movic Steps Support Request"; // Default email subject
+"support_request_body" = "Please describe your issue or question below:\n\n\n\n---\nDevice: iPhone %@\nApp Version: 1.1\niOS Version: %@"; // Email body template with device info
+"send_email" = "Send Email"; // Button to send email
+"clear" = "Clear"; // Button to clear chat messages
+"done" = "Done"; // Button to dismiss modal
+"ai_assistant" = "AI Assistant"; // AI assistant screen title
+
+// MARK: - FAQ Items
+"faq_step_counting_question" = "How does step counting work?"; // FAQ question about step counting
+"faq_step_counting_answer" = "Movic Steps uses your iPhone's built-in motion sensors to track your steps throughout the day. The app automatically counts steps when you're walking, running, or moving with your phone in your pocket or bag."; // FAQ answer about step counting
+"faq_healthkit_sync_question" = "Why aren't my steps syncing with HealthKit?"; // FAQ question about HealthKit sync
+"faq_healthkit_sync_answer" = "Make sure you've granted permission for Movic Steps to read and write data to HealthKit. Go to Settings > Privacy & Security > Health > Movic Steps and enable all permissions. You may also need to restart the app after granting permissions."; // FAQ answer about HealthKit sync
+"faq_accuracy_question" = "How accurate is the step counting?"; // FAQ question about accuracy
+"faq_accuracy_answer" = "Movic Steps is highly accurate when your phone is in your pocket or bag. The accuracy can vary depending on how you carry your phone and your walking pattern. For best results, keep your phone in your pocket while walking."; // FAQ answer about accuracy
+
+// MARK: - Additional Strings
+"message" = "Message"; // Generic message label
+
+// MARK: - 

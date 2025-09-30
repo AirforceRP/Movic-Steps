@@ -1,0 +1,234 @@
+/* 
+  Localizable.strings
+  Movic Steps
+  
+  French Localization
+*/
+
+// MARK: - App General
+"app_name" = "Movic Pas";
+"app_tagline" = "Votre Voyage Santé Commence Ici";
+
+// MARK: - Navigation
+"nav_steps" = "Pas";
+"nav_insights" = "Insights";
+"nav_goals" = "Objectifs";
+"nav_trends" = "Tendances";
+"nav_settings" = "Paramètres";
+
+// MARK: - Dashboard
+"dashboard_title" = "Activité d'Aujourd'hui";
+"steps_today" = "Pas d'Aujourd'hui";
+"via_healthkit" = "via HealthKit";
+"via_accelerometer" = "via Accéléromètre";
+"goal_label" = "Objectif";
+"complete_label" = "Terminé";
+"steps_label" = "pas";
+
+// MARK: - Metrics
+"distance_title" = "Distance";
+"calories_title" = "Calories";
+"active_time_title" = "Temps Actif";
+"pace_title" = "Rythme";
+"min_label" = "min";
+"steps_per_min" = "pas/min";
+
+// MARK: - Step Tracking
+"step_tracking_source" = "Source de Suivi des Pas";
+"real_time_tracking" = "Suivi en temps réel de l'accéléromètre";
+"active_status" = "Actif";
+"detecting_status" = "Détection";
+
+// MARK: - Quick Actions
+"quick_actions" = "Actions Rapides";
+"refresh_data" = "Actualiser les Données";
+"start_tracking" = "Commencer le Suivi";
+"stop_tracking" = "Arrêter le Suivi";
+"reset_steps" = "Réinitialiser les Pas";
+"calibrate" = "Calibrer";
+"set_goal" = "Définir l'Objectif";
+"view_history" = "Voir l'Historique";
+
+// MARK: - Goals
+"goals_title" = "Objectifs";
+"add_goal" = "Ajouter un Objectif";
+"edit_goal" = "Modifier l'Objectif";
+"delete_goal" = "Supprimer l'Objectif";
+"daily_goal" = "Objectif Quotidien";
+"weekly_goal" = "Objectif Hebdomadaire";
+"monthly_goal" = "Objectif Mensuel";
+"goal_type" = "Type d'Objectif";
+"target_value" = "Valeur Cible";
+"save_goal" = "Sauvegarder l'Objectif";
+"cancel" = "Annuler";
+"delete" = "Supprimer";
+"edit" = "Modifier";
+
+// MARK: - Trends
+"trends_title" = "Tendances";
+"daily" = "Quotidien";
+"weekly" = "Hebdomadaire";
+"monthly" = "Mensuel";
+"yearly" = "Annuel";
+"steps_trend" = "Tendance des Pas";
+"distance_trend" = "Tendance de Distance";
+"calories_trend" = "Tendance des Calories";
+"active_time_trend" = "Tendance du Temps Actif";
+
+// MARK: - Insights
+"insights_title" = "Insights Santé";
+"achievements" = "Réalisations";
+"past_achievements" = "Réalisations Passées";
+"insights_description" = "Découvrez les modèles dans vos données de santé";
+
+// MARK: - Settings
+"settings_title" = "Paramètres";
+"notifications" = "Notifications";
+"weekly_reports" = "Rapports Hebdomadaires";
+"unit_system" = "Système d'Unités";
+"metric" = "Métrique";
+"imperial" = "Impérial";
+"color_blindness" = "Support Daltonisme";
+"none" = "Aucun";
+"protanopia" = "Protanopie";
+"deuteranopia" = "Deutéranopie";
+"tritanopia" = "Tritanopie";
+"faq" = "FAQ";
+"contact_support" = "Contacter le Support";
+"email_support" = "Support par Email";
+"privacy_policy" = "Politique de Confidentialité";
+"terms_of_service" = "Conditions d'Utilisation";
+
+// MARK: - Permissions
+"health_permission_title" = "Accès aux Données de Santé";
+"health_permission_message" = "Activez HealthKit pour suivre automatiquement vos pas et métriques de santé.";
+"grant_access" = "Accorder l'Accès";
+"permission_required" = "Permission Requise";
+
+// MARK: - Alerts & Messages
+"goal_deleted" = "Objectif Supprimé";
+"goal_deleted_message" = "Votre objectif a été supprimé avec succès.";
+"goal_saved" = "Objectif Sauvegardé";
+"goal_saved_message" = "Votre objectif a été sauvegardé avec succès.";
+"error_occurred" = "Erreur Survenue";
+"try_again" = "Réessayer";
+"ok" = "OK";
+
+// MARK: - Time Periods
+"today" = "Aujourd'hui";
+"yesterday" = "Hier";
+"this_week" = "Cette Semaine";
+"last_week" = "Semaine Dernière";
+"this_month" = "Ce Mois";
+"last_month" = "Mois Dernier";
+"this_year" = "Cette Année";
+"last_year" = "Année Dernière";
+
+// MARK: - Loading
+"loading" = "Chargement...";
+"initializing" = "Initialisation...";
+"loading_health_data" = "Chargement des Données de Santé...";
+"setting_up_notifications" = "Configuration des Notifications...";
+"preparing_interface" = "Préparation de l'Interface...";
+"almost_ready" = "Presque Prêt...";
+"ready" = "Prêt !";
+
+// MARK: - Chatbot
+"chatbot_title" = "Aide et Support";
+"chatbot_placeholder" = "Demandez-moi n'importe quoi sur Movic Pas...";
+"send" = "Envoyer";
+
+// MARK: - Settings Sections
+"units_display" = "Unités et Affichage";
+"language" = "Langue";
+"appearance" = "Apparence";
+"personal_information" = "Informations Personnelles";
+"goals" = "Objectifs";
+"step_tracking" = "Suivi des Pas";
+"notifications" = "Notifications";
+"accessibility" = "Accessibilité";
+"frequently_asked_questions" = "Questions Fréquemment Posées";
+"about" = "À Propos";
+
+// MARK: - Settings Labels
+"unit_system" = "Système d'Unités";
+"distance" = "Distance";
+"weight" = "Poids";
+"height" = "Taille";
+"language_selection" = "Sélection de Langue";
+"theme" = "Thème";
+"haptic_feedback" = "Retour Haptique";
+"enable_sounds" = "Activer les Sons";
+"daily_step_goal" = "Objectif Quotidien de Pas";
+"daily_steps" = "Pas Quotidiens";
+"preferred_source" = "Source Préférée";
+"step_sensitivity" = "Sensibilité des Pas";
+"calibration_factor" = "Facteur de Calibrage";
+"adjust_accuracy" = "Ajuster pour affiner la précision du comptage de pas";
+"enable_notifications" = "Activer les Notifications";
+"permission_required" = "Permission Requise";
+"allow_notifications" = "Veuillez autoriser les notifications dans les Paramètres";
+"settings" = "Paramètres";
+"goal_reminder" = "Rappel d'Objectif";
+"weekly_progress_report" = "Rapport de Progrès Hebdomadaire";
+
+// MARK: - Accessibility
+"voiceover_support" = "Support VoiceOver";
+"voiceover_hint" = "Active le support VoiceOver amélioré dans toute l'application";
+"reduce_motion" = "Réduire le Mouvement";
+"reduce_motion_hint" = "Réduit les animations et effets de mouvement";
+"high_contrast" = "Contraste Élevé";
+"high_contrast_hint" = "Augmente le contraste pour une meilleure visibilité";
+"large_text" = "Texte Large";
+"large_text_hint" = "Active un texte plus grand dans toute l'application";
+"bold_text" = "Texte en Gras";
+"bold_text_hint" = "Rend le texte en gras pour une meilleure lisibilité";
+"text_size" = "Taille de Texte";
+"text_size_hint" = "Ajuste la taille de texte de base dans toute l'application";
+"color_vision" = "Vision des Couleurs";
+"color_vision_hint" = "Ajuste les couleurs pour différents types de vision des couleurs";
+"open_system_accessibility" = "Ouvrir les Paramètres d'Accessibilité du Système";
+"accessibility_hint" = "Ouvre les paramètres d'accessibilité iOS";
+"accessibility_preview" = "Aperçu d'Accessibilité";
+"sample_text" = "Texte d'Exemple";
+"demo_button" = "Bouton de Démonstration";
+"preview_description" = "Cet aperçu se met à jour en fonction de vos paramètres d'accessibilité ci-dessus";
+
+// MARK: - About Section
+"version" = "Version";
+"build" = "Compilation";
+"view_faqs" = "Voir les FAQ";
+"contact_support" = "Contacter le Support";
+"privacy_policy" = "Politique de Confidentialité";
+"terms_of_service" = "Conditions d'Utilisation";
+
+// MARK: - Calibration
+"step_calibration" = "Calibrage des Pas";
+"calibration_description" = "Améliorez la précision en calibrant votre compteur de pas";
+"instruction_1" = "Trouvez un chemin dégagé où vous pouvez marcher librement";
+"instruction_2" = "Tenez votre téléphone naturellement en marchant";
+"instruction_3" = "Marchez exactement le nombre de pas que vous spécifiez";
+"instruction_4" = "Nous comparerons vos pas réels aux pas détectés";
+"start_calibration" = "Commencer le Calibrage";
+
+// MARK: - Email Support
+"email_support_title" = "Support par Email";
+"email_support_description" = "Cela ouvrira votre application email avec un message pré-rempli à notre équipe de support.";
+"subject" = "Sujet";
+"support_request_subject" = "Demande de Support Movic Steps";
+"support_request_body" = "Veuillez décrire votre problème ou question ci-dessous:\n\n\n\n---\nAppareil: iPhone %@\nVersion de l'App: 1.1\nVersion iOS: %@";
+"send_email" = "Envoyer l'Email";
+"clear" = "Effacer";
+"done" = "Terminé";
+"ai_assistant" = "Assistant IA";
+
+// MARK: - FAQ Items
+"faq_step_counting_question" = "Comment fonctionne le comptage de pas?";
+"faq_step_counting_answer" = "Movic Steps utilise les capteurs de mouvement intégrés de votre iPhone pour suivre vos pas tout au long de la journée. L'application compte automatiquement les pas lorsque vous marchez, courez ou bougez avec votre téléphone dans votre poche ou sac.";
+"faq_healthkit_sync_question" = "Pourquoi mes pas ne se synchronisent-ils pas avec HealthKit?";
+"faq_healthkit_sync_answer" = "Assurez-vous d'avoir accordé la permission à Movic Steps de lire et écrire des données dans HealthKit. Allez dans Paramètres > Confidentialité et Sécurité > Santé > Movic Steps et activez toutes les permissions. Vous devrez peut-être aussi redémarrer l'application après avoir accordé les permissions.";
+"faq_accuracy_question" = "Quelle est la précision du comptage de pas?";
+"faq_accuracy_answer" = "Movic Steps est très précis lorsque votre téléphone est dans votre poche ou sac. La précision peut varier selon la façon dont vous portez votre téléphone et votre modèle de marche. Pour de meilleurs résultats, gardez votre téléphone dans votre poche en marchant.";
+
+// MARK: - Additional Strings
+"message" = "Message";

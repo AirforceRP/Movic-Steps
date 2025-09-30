@@ -1,0 +1,234 @@
+/* 
+  Localizable.strings
+  Movic Steps
+  
+  Mandarin Chinese (Simplified) Localization
+*/
+
+// MARK: - App General
+"app_name" = "步数追踪";
+"app_tagline" = "您的健康之旅从这里开始";
+
+// MARK: - Navigation
+"nav_steps" = "步数";
+"nav_insights" = "洞察";
+"nav_goals" = "目标";
+"nav_trends" = "趋势";
+"nav_settings" = "设置";
+
+// MARK: - Dashboard
+"dashboard_title" = "今日活动";
+"steps_today" = "今日步数";
+"via_healthkit" = "通过健康应用";
+"via_accelerometer" = "通过加速度计";
+"goal_label" = "目标";
+"complete_label" = "完成";
+"steps_label" = "步";
+
+// MARK: - Metrics
+"distance_title" = "距离";
+"calories_title" = "卡路里";
+"active_time_title" = "活跃时间";
+"pace_title" = "步频";
+"min_label" = "分钟";
+"steps_per_min" = "步/分钟";
+
+// MARK: - Step Tracking
+"step_tracking_source" = "步数追踪来源";
+"real_time_tracking" = "实时加速度计追踪";
+"active_status" = "活跃";
+"detecting_status" = "检测中";
+
+// MARK: - Quick Actions
+"quick_actions" = "快速操作";
+"refresh_data" = "刷新数据";
+"start_tracking" = "开始追踪";
+"stop_tracking" = "停止追踪";
+"reset_steps" = "重置步数";
+"calibrate" = "校准";
+"set_goal" = "设置目标";
+"view_history" = "查看历史";
+
+// MARK: - Goals
+"goals_title" = "目标";
+"add_goal" = "添加目标";
+"edit_goal" = "编辑目标";
+"delete_goal" = "删除目标";
+"daily_goal" = "每日目标";
+"weekly_goal" = "每周目标";
+"monthly_goal" = "每月目标";
+"goal_type" = "目标类型";
+"target_value" = "目标值";
+"save_goal" = "保存目标";
+"cancel" = "取消";
+"delete" = "删除";
+"edit" = "编辑";
+
+// MARK: - Trends
+"trends_title" = "趋势";
+"daily" = "日";
+"weekly" = "周";
+"monthly" = "月";
+"yearly" = "年";
+"steps_trend" = "步数趋势";
+"distance_trend" = "距离趋势";
+"calories_trend" = "卡路里趋势";
+"active_time_trend" = "活跃时间趋势";
+
+// MARK: - Insights
+"insights_title" = "健康洞察";
+"achievements" = "成就";
+"past_achievements" = "过往成就";
+"insights_description" = "发现您健康数据中的模式";
+
+// MARK: - Settings
+"settings_title" = "设置";
+"notifications" = "通知";
+"weekly_reports" = "周报";
+"unit_system" = "单位系统";
+"metric" = "公制";
+"imperial" = "英制";
+"color_blindness" = "色盲支持";
+"none" = "无";
+"protanopia" = "红色盲";
+"deuteranopia" = "绿色盲";
+"tritanopia" = "蓝色盲";
+"faq" = "常见问题";
+"contact_support" = "联系支持";
+"email_support" = "邮件支持";
+"privacy_policy" = "隐私政策";
+"terms_of_service" = "服务条款";
+
+// MARK: - Permissions
+"health_permission_title" = "健康数据访问";
+"health_permission_message" = "启用健康应用以自动追踪您的步数和健康指标。";
+"grant_access" = "授权访问";
+"permission_required" = "需要权限";
+
+// MARK: - Alerts & Messages
+"goal_deleted" = "目标已删除";
+"goal_deleted_message" = "您的目标已成功删除。";
+"goal_saved" = "目标已保存";
+"goal_saved_message" = "您的目标已成功保存。";
+"error_occurred" = "发生错误";
+"try_again" = "重试";
+"ok" = "确定";
+
+// MARK: - Time Periods
+"today" = "今天";
+"yesterday" = "昨天";
+"this_week" = "本周";
+"last_week" = "上周";
+"this_month" = "本月";
+"last_month" = "上月";
+"this_year" = "今年";
+"last_year" = "去年";
+
+// MARK: - Loading
+"loading" = "加载中...";
+"initializing" = "初始化中...";
+"loading_health_data" = "加载健康数据中...";
+"setting_up_notifications" = "设置通知中...";
+"preparing_interface" = "准备界面中...";
+"almost_ready" = "即将就绪...";
+"ready" = "准备就绪！";
+
+// MARK: - Chatbot
+"chatbot_title" = "帮助与支持";
+"chatbot_placeholder" = "询问任何关于步数追踪的问题...";
+"send" = "发送";
+
+// MARK: - Settings Sections
+"units_display" = "单位与显示";
+"language" = "语言";
+"appearance" = "外观";
+"personal_information" = "个人信息";
+"goals" = "目标";
+"step_tracking" = "步数追踪";
+"notifications" = "通知";
+"accessibility" = "无障碍功能";
+"frequently_asked_questions" = "常见问题";
+"about" = "关于";
+
+// MARK: - Settings Labels
+"unit_system" = "单位系统";
+"distance" = "距离";
+"weight" = "体重";
+"height" = "身高";
+"language_selection" = "语言选择";
+"theme" = "主题";
+"haptic_feedback" = "触觉反馈";
+"enable_sounds" = "启用声音";
+"daily_step_goal" = "每日步数目标";
+"daily_steps" = "每日步数";
+"preferred_source" = "首选来源";
+"step_sensitivity" = "步数敏感度";
+"calibration_factor" = "校准因子";
+"adjust_accuracy" = "调整以微调步数计算准确性";
+"enable_notifications" = "启用通知";
+"permission_required" = "需要权限";
+"allow_notifications" = "请在设置中允许通知";
+"settings" = "设置";
+"goal_reminder" = "目标提醒";
+"weekly_progress_report" = "每周进度报告";
+
+// MARK: - Accessibility
+"voiceover_support" = "VoiceOver 支持";
+"voiceover_hint" = "在整个应用中启用增强的 VoiceOver 支持";
+"reduce_motion" = "减少动画";
+"reduce_motion_hint" = "减少动画和运动效果";
+"high_contrast" = "高对比度";
+"high_contrast_hint" = "增加对比度以提高可见性";
+"large_text" = "大字体";
+"large_text_hint" = "在整个应用中启用更大的文本";
+"bold_text" = "粗体文本";
+"bold_text_hint" = "使文本加粗以提高可读性";
+"text_size" = "文本大小";
+"text_size_hint" = "调整整个应用中的基本文本大小";
+"color_vision" = "色觉";
+"color_vision_hint" = "为不同类型的色觉调整颜色";
+"open_system_accessibility" = "打开系统无障碍设置";
+"accessibility_hint" = "打开 iOS 无障碍设置";
+"accessibility_preview" = "无障碍预览";
+"sample_text" = "示例文本";
+"demo_button" = "演示按钮";
+"preview_description" = "此预览会根据您上面的无障碍设置进行更新";
+
+// MARK: - About Section
+"version" = "版本";
+"build" = "构建";
+"view_faqs" = "查看常见问题";
+"contact_support" = "联系支持";
+"privacy_policy" = "隐私政策";
+"terms_of_service" = "服务条款";
+
+// MARK: - Calibration
+"step_calibration" = "步数校准";
+"calibration_description" = "通过校准您的步数计数器来提高准确性";
+"instruction_1" = "找到一个可以自由行走的清晰路径";
+"instruction_2" = "行走时自然地拿着手机";
+"instruction_3" = "准确行走您指定的步数";
+"instruction_4" = "我们将比较您的实际步数与检测到的步数";
+"start_calibration" = "开始校准";
+
+// MARK: - Email Support
+"email_support_title" = "邮件支持";
+"email_support_description" = "这将打开您的邮件应用，并预填一条发送给我们支持团队的消息。";
+"subject" = "主题";
+"support_request_subject" = "Movic Steps 支持请求";
+"support_request_body" = "请在下面描述您的问题或疑问：\n\n\n\n---\n设备：iPhone %@\n应用版本：1.1\niOS 版本：%@";
+"send_email" = "发送邮件";
+"clear" = "清除";
+"done" = "完成";
+"ai_assistant" = "AI 助手";
+
+// MARK: - FAQ Items
+"faq_step_counting_question" = "步数计算是如何工作的？";
+"faq_step_counting_answer" = "Movic Steps 使用您 iPhone 的内置运动传感器来跟踪您一天的步数。当您走路、跑步或手机放在口袋或包里移动时，应用会自动计算步数。";
+"faq_healthkit_sync_question" = "为什么我的步数没有与 HealthKit 同步？";
+"faq_healthkit_sync_answer" = "确保您已授予 Movic Steps 读取和写入 HealthKit 数据的权限。前往设置 > 隐私与安全 > 健康 > Movic Steps 并启用所有权限。授予权限后，您可能还需要重启应用。";
+"faq_accuracy_question" = "步数计算的准确性如何？";
+"faq_accuracy_answer" = "当您的手机放在口袋或包里时，Movic Steps 非常准确。准确性可能会根据您携带手机的方式和步行模式而有所不同。为了获得最佳效果，请在步行时将手机放在口袋里。";
+
+// MARK: - Additional Strings
+"message" = "消息";
