@@ -211,6 +211,47 @@ struct SimpleSettingsView: View {
                             .font(.caption)
                             .foregroundColor(.secondary)
                     }
+                    
+                    // Floor Tracking Section
+                    VStack(alignment: .leading, spacing: 12) {
+                        HStack {
+                            Text("floor_tracking".localized)
+                                .font(.headline)
+                            
+                            Spacer()
+                            
+                            Button(action: {
+                                // Show floor tracking setup
+                            }) {
+                                Text("setup".localized)
+                                    .font(.caption)
+                                    .foregroundColor(.blue)
+                            }
+                        }
+                        
+                        Toggle("enable_floor_tracking".localized, isOn: $settings.enableFloorTracking)
+                        
+                        if settings.enableFloorTracking {
+                            HStack {
+                                Text("floor_height".localized)
+                                Spacer()
+                                Text("\(String(format: "%.1f", settings.floorHeight)) \(settings.unitSystem == .metric ? "m" : "ft")")
+                                    .foregroundColor(.secondary)
+                            }
+                            
+                            HStack {
+                                Text("floor_sensitivity".localized)
+                                Spacer()
+                                Picker("floor_sensitivity".localized, selection: $settings.floorSensitivity) {
+                                    ForEach(FloorSensitivity.allCases) { sensitivity in
+                                        Text(sensitivity.displayName).tag(sensitivity)
+                                    }
+                                }
+                                .pickerStyle(.menu)
+                            }
+                        }
+                    }
+                    .padding(.vertical, 8)
                 }
                 
                 Section("notifications".localized) {
@@ -440,6 +481,10 @@ struct FAQView: View {
     @State private var expandedItems: Set<Int> = []
     
     private let faqItems = [
+        FAQItem(
+            question: "faq_language_switch_question".localized,
+            answer: "faq_language_switch_answer".localized
+        ),
         FAQItem(
             question: "faq_step_counting_question".localized,
             answer: "faq_step_counting_answer".localized,

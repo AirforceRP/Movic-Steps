@@ -29,9 +29,11 @@
 "distance_title" = "Distance"; // Distance metric card title
 "calories_title" = "Calories"; // Calories burned metric card title
 "active_time_title" = "Active Time"; // Active minutes metric card title
+"floors_title" = "Floors"; // Floors climbed metric card title
 "pace_title" = "Pace"; // Walking pace metric card title
 "min_label" = "min"; // Minutes unit abbreviation
 "steps_per_min" = "steps/min"; // Steps per minute unit
+"floors_label" = "floors"; // Floors unit label
 
 // MARK: - Step Tracking
 "step_tracking_source" = "Step Tracking Source"; // Settings label for tracking source selection
@@ -229,6 +231,29 @@
 "faq_healthkit_sync_answer" = "Make sure you've granted permission for Movic Steps to read and write data to HealthKit. Go to Settings > Privacy & Security > Health > Movic Steps and enable all permissions. You may also need to restart the app after granting permissions."; // FAQ answer about HealthKit sync
 "faq_accuracy_question" = "How accurate is the step counting?"; // FAQ question about accuracy
 "faq_accuracy_answer" = "Movic Steps is highly accurate when your phone is in your pocket or bag. The accuracy can vary depending on how you carry your phone and your walking pattern. For best results, keep your phone in your pocket while walking."; // FAQ answer about accuracy
+"faq_language_switch_question" = "How do I change the app language?"; // FAQ question about language switching
+"faq_language_switch_answer" = "To change the app language: 1) Go to Settings, 2) Tap on 'Language Selection', 3) Choose your preferred language, 4) Close and reopen the app for the changes to take effect. The app will remember your language choice for future sessions."; // FAQ answer about language switching
+
+// MARK: - Floor Tracking
+"floor_tracking" = "Floor Tracking"; // Floor tracking section title
+"enable_floor_tracking" = "Enable Floor Tracking"; // Floor tracking toggle label
+"floor_tracking_setup" = "Floor Tracking Setup"; // Floor tracking setup screen title
+"floor_tracking_description" = "Track the number of floors you climb throughout the day using your device's motion sensors."; // Floor tracking description
+"floor_tracking_toggle_description" = "Detect when you climb stairs or elevators"; // Floor tracking toggle description
+"floor_height_configuration" = "Floor Height Configuration"; // Floor height configuration section
+"floor_height" = "Floor Height"; // Floor height label
+"floor_height_description" = "Set the average height of floors in your building for more accurate tracking"; // Floor height description
+"floor_sensitivity" = "Floor Sensitivity"; // Floor sensitivity label
+"sensitivity_levels" = "Sensitivity Levels"; // Sensitivity levels title
+"how_it_works" = "How It Works"; // How it works title
+"floor_detection_explanation" = "Floor detection uses your device's motion sensors to detect vertical movement patterns. Higher sensitivity detects smaller elevation changes, while lower sensitivity only detects significant floor changes."; // Floor detection explanation
+"sensitivity_info" = "Sensitivity Information"; // Sensitivity info title
+"floor_tracking_tips" = "Floor Tracking Tips"; // Floor tracking tips title
+"floor_tip_location" = "Keep your device in your pocket or bag while climbing"; // Floor tip location
+"floor_tip_device" = "Ensure your device has motion sensors enabled"; // Floor tip device
+"floor_tip_calibration" = "Calibrate sensitivity based on your climbing patterns"; // Floor tip calibration
+"floor_tip_battery" = "Floor tracking uses minimal battery power"; // Floor tip battery
+"setup" = "Setup"; // Setup button label
 
 // MARK: - Additional Strings
 "message" = "Message"; // Generic message label

@@ -66,4 +66,4 @@ This app helps users:
 
 ## Privacy
 
-This app respects your privacy and only accesses health data you explicitly grant permission for. All data is stored locally on your device and can be deleted at any time through the Health app settings. Only Steps Pace and Distance are Caculated In my VPS in the EU, GDPR applies.
+This app respects your privacy and only accesses health data you explicitly grant permission for. All data is stored locally on your device and can be deleted at any time through the Health app settings.

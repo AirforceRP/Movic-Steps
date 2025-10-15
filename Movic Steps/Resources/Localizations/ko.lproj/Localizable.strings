@@ -29,9 +29,11 @@
 "distance_title" = "거리";
 "calories_title" = "칼로리";
 "active_time_title" = "활동 시간";
+"floors_title" = "층수";
 "pace_title" = "속도";
 "min_label" = "분";
 "steps_per_min" = "걸음/분";
+"floors_label" = "층";
 
 // MARK: - Step Tracking
 "step_tracking_source" = "걸음수 추적 소스";
@@ -229,6 +231,29 @@
 "faq_healthkit_sync_answer" = "Movic Steps가 HealthKit에서 데이터를 읽고 쓸 수 있는 권한을 부여했는지 확인하세요. 설정 > 개인정보 보호 및 보안 > 건강 > Movic Steps로 이동하여 모든 권한을 활성화하세요. 권한을 부여한 후 앱을 다시 시작해야 할 수도 있습니다.";
 "faq_accuracy_question" = "걸음 수 계산의 정확도는 어느 정도인가요?";
 "faq_accuracy_answer" = "휴대폰이 주머니나 가방에 있을 때 Movic Steps는 매우 정확합니다. 정확도는 휴대폰을 어떻게 들고 다니는지와 걷는 패턴에 따라 달라질 수 있습니다. 최상의 결과를 위해 걷을 때 휴대폰을 주머니에 넣어 두세요.";
+"faq_language_switch_question" = "앱 언어를 어떻게 변경하나요?";
+"faq_language_switch_answer" = "앱 언어를 변경하려면: 1) 설정으로 이동, 2) '언어 선택'을 탭, 3) 원하는 언어를 선택, 4) 변경사항이 적용되도록 앱을 닫고 다시 열기. 앱은 향후 세션을 위해 언어 선택을 기억합니다.";
+
+// MARK: - Floor Tracking
+"floor_tracking" = "층수 추적";
+"enable_floor_tracking" = "층수 추적 활성화";
+"floor_tracking_setup" = "층수 추적 설정";
+"floor_tracking_description" = "기기의 모션 센서를 사용하여 하루 종일 오른 층수를 추적합니다.";
+"floor_tracking_toggle_description" = "계단이나 엘리베이터를 이용할 때 감지";
+"floor_height_configuration" = "층 높이 설정";
+"floor_height" = "층 높이";
+"floor_height_description" = "더 정확한 추적을 위해 건물의 평균 층 높이를 설정하세요";
+"floor_sensitivity" = "층수 감도";
+"sensitivity_levels" = "감도 수준";
+"how_it_works" = "작동 원리";
+"floor_detection_explanation" = "층수 감지는 기기의 모션 센서를 사용하여 수직 움직임 패턴을 감지합니다. 높은 감도는 작은 고도 변화를 감지하고, 낮은 감도는 중요한 층 변화만 감지합니다.";
+"sensitivity_info" = "감도 정보";
+"floor_tracking_tips" = "층수 추적 팁";
+"floor_tip_location" = "오를 때 기기를 주머니나 가방에 넣어 두세요";
+"floor_tip_device" = "기기에 모션 센서가 활성화되어 있는지 확인하세요";
+"floor_tip_calibration" = "오르는 패턴에 따라 감도를 보정하세요";
+"floor_tip_battery" = "층수 추적은 최소한의 배터리를 사용합니다";
+"setup" = "설정";
 
 // MARK: - Additional Strings
 "message" = "메시지";

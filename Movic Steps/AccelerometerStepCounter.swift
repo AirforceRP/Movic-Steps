@@ -18,6 +18,7 @@ class AccelerometerStepCounter: ObservableObject {
     private let userSettings = UserSettings.shared
     
     @Published var currentSteps: Int = 0
+    @Published var currentFloors: Int = 0
     @Published var isTracking: Bool = false
     @Published var acceleration: CMAcceleration = CMAcceleration(x: 0, y: 0, z: 0)
     
@@ -33,6 +34,13 @@ class AccelerometerStepCounter: ObservableObject {
     private var accelerationHistory: [Double] = []
     private let historySize = 10
     
+    // Floor detection parameters
+    private var lastAltitude: Double = 0
+    private var altitudeHistory: [Double] = []
+    private var floorDetectionEnabled: Bool = false
+    private var lastFloorTime: TimeInterval = 0
+    private var minTimeBetweenFloors: TimeInterval = 2.0
+    
     // Smoothing and filtering
     private var filteredAcceleration: Double = 0
     private let smoothingFactor: Double = 0.1
@@ -40,6 +48,7 @@ class AccelerometerStepCounter: ObservableObject {
     init() {
         setupMotionManager()
         requestMotionPermissions()
+        enableFloorDetection()
     }
     
     private func setupMotionManager() {
@@ -68,6 +77,7 @@ class AccelerometerStepCounter: ObservableObject {
         
         isTracking = true
         currentSteps = 0
+        currentFloors = 0
         updateGoalProgress()
         
         // Use CMPedometer for more accurate step counting when available
@@ -143,6 +153,9 @@ class AccelerometerStepCounter: ObservableObject {
         
         // Detect steps using peak detection
         detectStep()
+        
+        // Detect floor changes
+        detectFloorChange()
     }
     
     private func processDeviceMotion(_ motion: CMDeviceMotion) {
@@ -246,6 +259,51 @@ class AccelerometerStepCounter: ObservableObject {
     
     func getCalibrationFactor() -> Double {
         return UserSettings.shared.stepCalibrationFactor
+    }
+    
+    // MARK: - Floor Detection Methods
+    
+    private func enableFloorDetection() {
+        floorDetectionEnabled = userSettings.enableFloorTracking
+    }
+    
+    private func detectFloorChange() {
+        guard floorDetectionEnabled else { return }
+        
+        let currentTime = CACurrentMediaTime()
+        
+        // Check if enough time has passed since last floor detection
+        guard currentTime - lastFloorTime > minTimeBetweenFloors else { return }
+        
+        // Simple floor detection based on vertical acceleration patterns
+        // This is a basic implementation - in a real app, you'd use barometric pressure
+        let verticalAcceleration = abs(acceleration.z)
+        let threshold = userSettings.floorSensitivity.threshold
+        
+        if verticalAcceleration > threshold {
+            // Check if this represents a significant vertical movement
+            let recentValues = Array(accelerationHistory.suffix(5))
+            let isSignificantChange = recentValues.allSatisfy { $0 > threshold * 0.8 }
+            
+            if isSignificantChange {
+                registerFloorClimbed()
+                lastFloorTime = currentTime
+            }
+        }
+    }
+    
+    private func registerFloorClimbed() {
+        DispatchQueue.main.async {
+            self.currentFloors += 1
+            
+            // Add haptic feedback for floor detection
+            let impactFeedback = UIImpactFeedbackGenerator(style: .medium)
+            impactFeedback.impactOccurred()
+        }
+    }
+    
+    func resetFloorCount() {
+        currentFloors = 0
     }
     
     deinit {

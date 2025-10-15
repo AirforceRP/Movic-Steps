@@ -20,6 +20,7 @@ class HealthKitManager: ObservableObject {
     @Published var todayDistance = 0.0
     @Published var todayCalories = 0.0
     @Published var todayActiveMinutes = 0
+    @Published var todayFloors = 0
     @Published var isLoading = false
     
     // Flag to prevent circular updates
@@ -34,6 +35,7 @@ class HealthKitManager: ObservableObject {
     private let distanceType = HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning)!
     private let activeEnergyType = HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!
     private let activeMinutesType = HKQuantityType.quantityType(forIdentifier: .appleExerciseTime)!
+    private let floorsType = HKQuantityType.quantityType(forIdentifier: .flightsClimbed)!
     
     init() {
         NSLog("🏁 HealthKitManager init called")
@@ -71,6 +73,7 @@ class HealthKitManager: ObservableObject {
             self.isAuthorized = true
             self.todaySteps = 7543
             self.todayDistance = 5420.0 // meters
+            self.todayFloors = 12 // floors climbed
             self.isLoading = false
             
             // Calculate calories and active minutes using the calculation methods
@@ -139,7 +142,8 @@ class HealthKitManager: ObservableObject {
             stepType,
             distanceType,
             activeEnergyType,
-            activeMinutesType
+            activeMinutesType,
+            floorsType
         ]
         
         healthStore.requestAuthorization(toShare: nil, read: typesToRead) { [weak self] success, error in
@@ -249,6 +253,22 @@ class HealthKitManager: ObservableObject {
             group.leave()
         }
         healthStore.execute(activeMinutesQuery)
+        
+        // Fetch floors climbed
+        group.enter()
+        let floorsQuery = HKStatisticsQuery(quantityType: floorsType, quantitySamplePredicate: predicate, options: .cumulativeSum) { [weak self] _, result, error in
+            if let error = error {
+                print("❌ Error fetching floors: \(error.localizedDescription)")
+            } else if let result = result, let sum = result.sumQuantity() {
+                DispatchQueue.main.async {
+                    // round to nearest integer
+                    self?.todayFloors = Int(sum.doubleValue(for: HKUnit.count()))
+                    print("📊 Fetched floors: \(self?.todayFloors ?? 0) floors")
+                }
+            }
+            group.leave()
+        }
+        healthStore.execute(floorsQuery)
         
         group.notify(queue: .main) {
             self.isLoading = false

@@ -13,7 +13,9 @@ struct LoadingScreen: View {
         "Loading Health Data...",
         "Setting up Notifications...",
         "Preparing Interface...",
-        "Almost Ready..."
+        "Almost Ready...",
+        "Done!",
+        "Patching you in..."
     ]
 
     var body: some View {

@@ -29,9 +29,11 @@
 "distance_title" = "Distance";
 "calories_title" = "Calories";
 "active_time_title" = "Temps Actif";
+"floors_title" = "Étages";
 "pace_title" = "Rythme";
 "min_label" = "min";
 "steps_per_min" = "pas/min";
+"floors_label" = "étages";
 
 // MARK: - Step Tracking
 "step_tracking_source" = "Source de Suivi des Pas";
@@ -229,6 +231,29 @@
 "faq_healthkit_sync_answer" = "Assurez-vous d'avoir accordé la permission à Movic Steps de lire et écrire des données dans HealthKit. Allez dans Paramètres > Confidentialité et Sécurité > Santé > Movic Steps et activez toutes les permissions. Vous devrez peut-être aussi redémarrer l'application après avoir accordé les permissions.";
 "faq_accuracy_question" = "Quelle est la précision du comptage de pas?";
 "faq_accuracy_answer" = "Movic Steps est très précis lorsque votre téléphone est dans votre poche ou sac. La précision peut varier selon la façon dont vous portez votre téléphone et votre modèle de marche. Pour de meilleurs résultats, gardez votre téléphone dans votre poche en marchant.";
+"faq_language_switch_question" = "Comment changer la langue de l'application?";
+"faq_language_switch_answer" = "Pour changer la langue de l'application: 1) Allez dans Paramètres, 2) Appuyez sur 'Sélection de Langue', 3) Choisissez votre langue préférée, 4) Fermez et rouvrez l'application pour que les changements prennent effet. L'application se souviendra de votre choix de langue pour les sessions futures.";
+
+// MARK: - Floor Tracking
+"floor_tracking" = "Suivi des Étages";
+"enable_floor_tracking" = "Activer le Suivi des Étages";
+"floor_tracking_setup" = "Configuration du Suivi des Étages";
+"floor_tracking_description" = "Suivez le nombre d'étages que vous montez tout au long de la journée en utilisant les capteurs de mouvement de votre appareil.";
+"floor_tracking_toggle_description" = "Détecter quand vous montez des escaliers ou des ascenseurs";
+"floor_height_configuration" = "Configuration de la Hauteur des Étages";
+"floor_height" = "Hauteur des Étages";
+"floor_height_description" = "Définissez la hauteur moyenne des étages de votre bâtiment pour un suivi plus précis";
+"floor_sensitivity" = "Sensibilité des Étages";
+"sensitivity_levels" = "Niveaux de Sensibilité";
+"how_it_works" = "Comment ça Marche";
+"floor_detection_explanation" = "La détection d'étages utilise les capteurs de mouvement de votre appareil pour détecter les modèles de mouvement vertical. Une sensibilité élevée détecte de petits changements d'élévation, tandis qu'une sensibilité faible ne détecte que les changements d'étage significatifs.";
+"sensitivity_info" = "Informations sur la Sensibilité";
+"floor_tracking_tips" = "Conseils pour le Suivi des Étages";
+"floor_tip_location" = "Gardez votre appareil dans votre poche ou sac en montant";
+"floor_tip_device" = "Assurez-vous que votre appareil a les capteurs de mouvement activés";
+"floor_tip_calibration" = "Calibrez la sensibilité selon vos habitudes de montée";
+"floor_tip_battery" = "Le suivi des étages utilise une puissance de batterie minimale";
+"setup" = "Configuration";
 
 // MARK: - Additional Strings
 "message" = "Message";

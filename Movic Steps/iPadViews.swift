@@ -25,6 +25,15 @@ struct iPadStepTrackingViewWrapper: View {
         }
     }
     
+    private var currentFloors: Int {
+        switch selectedStepSource {
+        case .healthKit:
+            return healthKitManager.todayFloors
+        case .accelerometer:
+            return stepCounter.currentFloors
+        }
+    }
+    
     var body: some View {
         GeometryReader { geometry in
             ScrollView {
@@ -45,6 +54,7 @@ struct iPadStepTrackingViewWrapper: View {
                                 
                                 ModernStepCounterCard(
                                     steps: currentSteps,
+                                    floors: currentFloors,
                                     goal: userSettings.dailyStepGoal,
                                     isLoading: healthKitManager.isLoading,
                                     source: selectedStepSource

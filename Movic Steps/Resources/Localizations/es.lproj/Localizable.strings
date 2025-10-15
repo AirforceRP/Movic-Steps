@@ -29,9 +29,11 @@
 "distance_title" = "Distancia";
 "calories_title" = "Calorías";
 "active_time_title" = "Tiempo Activo";
+"floors_title" = "Pisos";
 "pace_title" = "Ritmo";
 "min_label" = "min";
 "steps_per_min" = "pasos/min";
+"floors_label" = "pisos";
 
 // MARK: - Step Tracking
 "step_tracking_source" = "Fuente de Seguimiento de Pasos";
@@ -229,6 +231,29 @@
 "faq_healthkit_sync_answer" = "Asegúrate de haber otorgado permiso a Movic Steps para leer y escribir datos en HealthKit. Ve a Configuración > Privacidad y Seguridad > Salud > Movic Steps y habilita todos los permisos. También puede que necesites reiniciar la aplicación después de otorgar los permisos.";
 "faq_accuracy_question" = "¿Qué tan preciso es el conteo de pasos?";
 "faq_accuracy_answer" = "Movic Steps es muy preciso cuando tu teléfono está en tu bolsillo o bolso. La precisión puede variar dependiendo de cómo cargas tu teléfono y tu patrón de caminata. Para mejores resultados, mantén tu teléfono en el bolsillo mientras caminas.";
+"faq_language_switch_question" = "¿Cómo cambio el idioma de la aplicación?";
+"faq_language_switch_answer" = "Para cambiar el idioma de la aplicación: 1) Ve a Configuración, 2) Toca 'Selección de Idioma', 3) Elige tu idioma preferido, 4) Cierra y vuelve a abrir la aplicación para que los cambios surtan efecto. La aplicación recordará tu elección de idioma para futuras sesiones.";
+
+// MARK: - Floor Tracking
+"floor_tracking" = "Seguimiento de Pisos";
+"enable_floor_tracking" = "Activar Seguimiento de Pisos";
+"floor_tracking_setup" = "Configuración de Seguimiento de Pisos";
+"floor_tracking_description" = "Rastrea el número de pisos que subes durante el día usando los sensores de movimiento de tu dispositivo.";
+"floor_tracking_toggle_description" = "Detectar cuando subes escaleras o ascensores";
+"floor_height_configuration" = "Configuración de Altura de Pisos";
+"floor_height" = "Altura de Pisos";
+"floor_height_description" = "Establece la altura promedio de los pisos en tu edificio para un seguimiento más preciso";
+"floor_sensitivity" = "Sensibilidad de Pisos";
+"sensitivity_levels" = "Niveles de Sensibilidad";
+"how_it_works" = "Cómo Funciona";
+"floor_detection_explanation" = "La detección de pisos usa los sensores de movimiento de tu dispositivo para detectar patrones de movimiento vertical. Mayor sensibilidad detecta cambios de elevación pequeños, mientras que menor sensibilidad solo detecta cambios de piso significativos.";
+"sensitivity_info" = "Información de Sensibilidad";
+"floor_tracking_tips" = "Consejos de Seguimiento de Pisos";
+"floor_tip_location" = "Mantén tu dispositivo en el bolsillo o bolso mientras subes";
+"floor_tip_device" = "Asegúrate de que tu dispositivo tenga los sensores de movimiento habilitados";
+"floor_tip_calibration" = "Calibra la sensibilidad según tus patrones de subida";
+"floor_tip_battery" = "El seguimiento de pisos usa energía de batería mínima";
+"setup" = "Configuración";
 
 // MARK: - Additional Strings
 "message" = "Mensaje";

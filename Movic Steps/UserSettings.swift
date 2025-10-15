@@ -133,6 +133,38 @@ enum StepTrackingSource: String, CaseIterable, Identifiable {
     }
 }
 
+enum FloorSensitivity: String, CaseIterable, Identifiable {
+    case low = "low"
+    case medium = "medium"
+    case high = "high"
+    
+    var id: String { rawValue }
+    
+    var displayName: String {
+        switch self {
+        case .low: return "Low"
+        case .medium: return "Medium"
+        case .high: return "High"
+        }
+    }
+    
+    var description: String {
+        switch self {
+        case .low: return "Only detects significant elevation changes"
+        case .medium: return "Balanced floor detection sensitivity"
+        case .high: return "Detects subtle elevation changes"
+        }
+    }
+    
+    var threshold: Double {
+        switch self {
+        case .low: return 2.5
+        case .medium: return 2.0
+        case .high: return 1.5
+        }
+    }
+}
+
 enum AccessibilityTextSize: String, CaseIterable, Identifiable {
     case small = "small"
     case medium = "medium"
@@ -206,6 +238,24 @@ class UserSettings: ObservableObject {
     @Published var dailyStepGoal: Int {
         didSet {
             UserDefaults.standard.set(dailyStepGoal, forKey: "dailyStepGoal")
+        }
+    }
+    
+    @Published var dailyStairsGoal: Int {
+        didSet {
+            UserDefaults.standard.set(dailyStairsGoal, forKey: "dailyStairsGoal")
+        }
+    }
+    
+    @Published var dailySleepGoal: Int {
+        didSet {
+            UserDefaults.standard.set(dailySleepGoal, forKey: "dailySleepGoal")
+        }
+    }
+    
+    @Published var dailyCalorieGoal: Int {
+        didSet {
+            UserDefaults.standard.set(dailyCalorieGoal, forKey: "dailyCalorieGoal")
         }
     }
     
@@ -293,6 +343,25 @@ class UserSettings: ObservableObject {
         }
     }
     
+    // MARK: - Floor Tracking Settings
+    @Published var enableFloorTracking: Bool {
+        didSet {
+            UserDefaults.standard.set(enableFloorTracking, forKey: "enableFloorTracking")
+        }
+    }
+    
+    @Published var floorHeight: Double {
+        didSet {
+            UserDefaults.standard.set(floorHeight, forKey: "floorHeight")
+        }
+    }
+    
+    @Published var floorSensitivity: FloorSensitivity {
+        didSet {
+            UserDefaults.standard.set(floorSensitivity.rawValue, forKey: "floorSensitivity")
+        }
+    }
+    
     // MARK: - Accessibility Settings
     @Published var enableVoiceOver: Bool {
         didSet {
@@ -346,6 +415,10 @@ class UserSettings: ObservableObject {
         
         self.dailyStepGoal = UserDefaults.standard.integer(forKey: "dailyStepGoal") == 0 ? 10000 : UserDefaults.standard.integer(forKey: "dailyStepGoal")
         
+        self.dailyStairsGoal = UserDefaults.standard.integer(forKey: "dailyStairsGoal") == 0 ? 10 : UserDefaults.standard.integer(forKey: "dailyStairsGoal")
+        self.dailySleepGoal = UserDefaults.standard.integer(forKey: "dailySleepGoal") == 0 ? 8 : UserDefaults.standard.integer(forKey: "dailySleepGoal")
+        self.dailyCalorieGoal = UserDefaults.standard.integer(forKey: "dailyCalorieGoal") == 0 ? 2000 : UserDefaults.standard.integer(forKey: "dailyCalorieGoal")
+        
         self.enableNotifications = UserDefaults.standard.bool(forKey: "enableNotifications")
         
         let goalReminderString = UserDefaults.standard.string(forKey: "goalReminderTime") ?? GoalReminderTime.evening.rawValue
@@ -373,6 +446,12 @@ class UserSettings: ObservableObject {
         self.walkingSpeed = UserDefaults.standard.object(forKey: "walkingSpeed") as? Double ?? 1.4 // Default to 1.4 m/s (5 km/h)
         self.stepLength = UserDefaults.standard.object(forKey: "stepLength") as? Double ?? 0.7 // Default to 0.7m (70cm)
         self.useCalculatedMetrics = UserDefaults.standard.object(forKey: "useCalculatedMetrics") as? Bool ?? true
+        
+        // Initialize floor tracking settings
+        self.enableFloorTracking = UserDefaults.standard.object(forKey: "enableFloorTracking") as? Bool ?? false
+        self.floorHeight = UserDefaults.standard.object(forKey: "floorHeight") as? Double ?? 3.0 // Default to 3 meters
+        let floorSensitivityString = UserDefaults.standard.string(forKey: "floorSensitivity") ?? FloorSensitivity.medium.rawValue
+        self.floorSensitivity = FloorSensitivity(rawValue: floorSensitivityString) ?? .medium
         
         // Initialize accessibility settings
         self.enableVoiceOver = UserDefaults.standard.bool(forKey: "enableVoiceOver")
@@ -538,6 +617,9 @@ class UserSettings: ObservableObject {
         unitSystem = .metric
         appTheme = .system
         dailyStepGoal = 10000
+        dailyStairsGoal = 10
+        dailySleepGoal = 8
+        dailyCalorieGoal = 2000
         enableNotifications = true
         goalReminderTime = .evening
         showWeeklyReport = true
@@ -552,6 +634,11 @@ class UserSettings: ObservableObject {
         walkingSpeed = 1.4
         stepLength = 0.7
         useCalculatedMetrics = true
+        
+        // Reset floor tracking settings
+        enableFloorTracking = false
+        floorHeight = 3.0
+        floorSensitivity = .medium
         
         // Reset accessibility settings
         enableVoiceOver = false

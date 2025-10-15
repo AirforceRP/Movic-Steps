@@ -14,6 +14,7 @@ struct Movic_StepsApp: App {
     @StateObject private var goalTracker = GoalTracker.shared
     @StateObject private var loadingStateManager = LoadingStateManager()
     @StateObject private var localizationManager = LocalizationManager.shared
+    @Environment(\.scenePhase) private var scenePhase
     
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
@@ -68,6 +69,15 @@ struct Movic_StepsApp: App {
                 // Request notification permissions on app launch
                 if !notificationManager.isAuthorized {
                     notificationManager.requestAuthorization()
+                }
+                
+                // Refresh language from UserDefaults to ensure persistence
+                localizationManager.refreshLanguageFromUserDefaults()
+            }
+            .onChange(of: scenePhase) { phase in
+                if phase == .active {
+                    // Refresh language when app becomes active
+                    localizationManager.refreshLanguageFromUserDefaults()
                 }
             }
         }

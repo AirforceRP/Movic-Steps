@@ -29,9 +29,11 @@
 "distance_title" = "Distanz";
 "calories_title" = "Kalorien";
 "active_time_title" = "Aktive Zeit";
+"floors_title" = "Stockwerke";
 "pace_title" = "Tempo";
 "min_label" = "Min";
 "steps_per_min" = "Schritte/Min";
+"floors_label" = "Stockwerke";
 
 // MARK: - Step Tracking
 "step_tracking_source" = "Schrittzählungsquelle";
@@ -229,6 +231,29 @@
 "faq_healthkit_sync_answer" = "Stellen Sie sicher, dass Sie Movic Steps die Berechtigung erteilt haben, Daten aus HealthKit zu lesen und zu schreiben. Gehen Sie zu Einstellungen > Datenschutz & Sicherheit > Gesundheit > Movic Steps und aktivieren Sie alle Berechtigungen. Möglicherweise müssen Sie die App nach der Erteilung der Berechtigungen neu starten.";
 "faq_accuracy_question" = "Wie genau ist die Schrittzählung?";
 "faq_accuracy_answer" = "Movic Steps ist sehr genau, wenn Ihr Telefon in Ihrer Tasche oder Ihrem Rucksack ist. Die Genauigkeit kann je nachdem, wie Sie Ihr Telefon tragen und Ihrem Gehmuster variieren. Für beste Ergebnisse halten Sie Ihr Telefon beim Gehen in Ihrer Tasche.";
+"faq_language_switch_question" = "Wie ändere ich die App-Sprache?";
+"faq_language_switch_answer" = "Um die App-Sprache zu ändern: 1) Gehen Sie zu Einstellungen, 2) Tippen Sie auf 'Sprachauswahl', 3) Wählen Sie Ihre bevorzugte Sprache, 4) Schließen und öffnen Sie die App erneut, damit die Änderungen wirksam werden. Die App wird sich Ihre Sprachauswahl für zukünftige Sitzungen merken.";
+
+// MARK: - Floor Tracking
+"floor_tracking" = "Stockwerk-Verfolgung";
+"enable_floor_tracking" = "Stockwerk-Verfolgung aktivieren";
+"floor_tracking_setup" = "Stockwerk-Verfolgung einrichten";
+"floor_tracking_description" = "Verfolgen Sie die Anzahl der Stockwerke, die Sie den ganzen Tag über mit den Bewegungssensoren Ihres Geräts erklimmen.";
+"floor_tracking_toggle_description" = "Erkennen, wenn Sie Treppen oder Aufzüge benutzen";
+"floor_height_configuration" = "Stockwerk-Höhe-Konfiguration";
+"floor_height" = "Stockwerk-Höhe";
+"floor_height_description" = "Legen Sie die durchschnittliche Höhe der Stockwerke in Ihrem Gebäude für eine genauere Verfolgung fest";
+"floor_sensitivity" = "Stockwerk-Empfindlichkeit";
+"sensitivity_levels" = "Empfindlichkeitsstufen";
+"how_it_works" = "Wie es funktioniert";
+"floor_detection_explanation" = "Die Stockwerk-Erkennung verwendet die Bewegungssensoren Ihres Geräts, um vertikale Bewegungsmuster zu erkennen. Höhere Empfindlichkeit erkennt kleine Höhenänderungen, während niedrigere Empfindlichkeit nur signifikante Stockwerk-Änderungen erkennt.";
+"sensitivity_info" = "Empfindlichkeits-Informationen";
+"floor_tracking_tips" = "Stockwerk-Verfolgung-Tipps";
+"floor_tip_location" = "Bewahren Sie Ihr Gerät in der Tasche oder im Rucksack auf, während Sie steigen";
+"floor_tip_device" = "Stellen Sie sicher, dass Ihr Gerät Bewegungssensoren aktiviert hat";
+"floor_tip_calibration" = "Kalibrieren Sie die Empfindlichkeit basierend auf Ihren Klettergewohnheiten";
+"floor_tip_battery" = "Die Stockwerk-Verfolgung verbraucht minimale Batterieleistung";
+"setup" = "Einrichten";
 
 // MARK: - Additional Strings
 "message" = "Nachricht";

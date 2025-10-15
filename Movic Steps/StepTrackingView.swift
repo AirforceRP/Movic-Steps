@@ -38,6 +38,15 @@ struct StepTrackingView: View {
         }
     }
     
+    private var currentFloors: Int {
+        switch selectedStepSource {
+        case .healthKit:
+            return healthKitManager.todayFloors
+        case .accelerometer:
+            return stepCounter.currentFloors
+        }
+    }
+    
     var body: some View {
         ZStack {
             // Animated gradient background
@@ -67,6 +76,7 @@ struct StepTrackingView: View {
                         // Main step counter with modern design
                         ModernStepCounterCard(
                             steps: currentSteps,
+                            floors: currentFloors,
                             goal: userSettings.dailyStepGoal,
                             isLoading: healthKitManager.isLoading,
                             source: selectedStepSource
@@ -95,6 +105,14 @@ struct StepTrackingView: View {
                                 value: "\(healthKitManager.todayActiveMinutes) \("min_label".localized)",
                                 icon: "clock.fill",
                                 color: .green.adjustedForColorBlindness(userSettings.colorBlindnessType),
+                                trend: .up
+                            )
+                            
+                            ModernMetricCard(
+                                title: "floors_title".localized,
+                                value: "\(currentFloors) \("floors_label".localized)",
+                                icon: "building.2.fill",
+                                color: .indigo.adjustedForColorBlindness(userSettings.colorBlindnessType),
                                 trend: .up
                             )
                             
@@ -257,6 +275,7 @@ struct SourceButton: View {
 
 struct ModernStepCounterCard: View {
     let steps: Int
+    let floors: Int
     let goal: Int
     let isLoading: Bool
     let source: StepTrackingView.StepSource
@@ -312,9 +331,15 @@ struct ModernStepCounterCard: View {
                 }
                 
                 HStack {
-                    Text("\("goal_label".localized): \(goal.formatted())")
-                        .font(.subheadline)
-                        .foregroundColor(.white.opacity(0.8))
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("\("goal_label".localized): \(goal.formatted())")
+                            .font(.subheadline)
+                            .foregroundColor(.white.opacity(0.8))
+                        
+                        Text("\(floors) \("floors_label".localized)")
+                            .font(.subheadline)
+                            .foregroundColor(.white.opacity(0.8))
+                    }
                     
                     Spacer()
                     
@@ -493,7 +518,7 @@ struct ModernQuickActionsView: View {
                     .foregroundColor(.primary)
                 
                 LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2), spacing: 12) {
-                    QuickActionButton(
+                    StepQuickActionButton(
                         title: "Refresh Data",
                         icon: "arrow.clockwise",
                         color: .blue
@@ -502,7 +527,7 @@ struct ModernQuickActionsView: View {
                     }
                     
                     if selectedSource == .accelerometer {
-                        QuickActionButton(
+                        StepQuickActionButton(
                             title: isTracking ? "Stop Tracking" : "Start Tracking",
                             icon: isTracking ? "stop.circle" : "play.circle",
                             color: isTracking ? .red : .green
@@ -510,7 +535,7 @@ struct ModernQuickActionsView: View {
                             toggleTracking()
                         }
                         
-                        QuickActionButton(
+                        StepQuickActionButton(
                             title: "Reset Steps",
                             icon: "arrow.counterclockwise",
                             color: .orange
@@ -518,7 +543,7 @@ struct ModernQuickActionsView: View {
                             resetSteps()
                         }
                         
-                        QuickActionButton(
+                        StepQuickActionButton(
                             title: "Calibrate",
                             icon: "tuningfork",
                             color: .purple
@@ -526,7 +551,7 @@ struct ModernQuickActionsView: View {
                             showingCalibration = true
                         }
                     } else {
-                        QuickActionButton(
+                        StepQuickActionButton(
                             title: "Set Goal",
                             icon: "target",
                             color: .green
@@ -534,7 +559,7 @@ struct ModernQuickActionsView: View {
                             showingGoalSetting = true
                         }
                         
-                        QuickActionButton(
+                        StepQuickActionButton(
                             title: "View History",
                             icon: "clock.arrow.circlepath",
                             color: .orange
@@ -542,7 +567,7 @@ struct ModernQuickActionsView: View {
                             showingHistory = true
                         }
                         
-                        // QuickActionButton(
+                        // StepQuickActionButton(
                         //     title: "Sync with Apple Watch",
                         //     icon: "applewatch",
                         //     color: .green
@@ -590,7 +615,7 @@ struct ModernQuickActionsView: View {
     }
 }
 
-struct QuickActionButton: View {
+struct StepQuickActionButton: View {
     let title: String
     let icon: String
     let color: Color

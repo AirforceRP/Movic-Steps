@@ -29,9 +29,11 @@
 "distance_title" = "距离";
 "calories_title" = "卡路里";
 "active_time_title" = "活跃时间";
+"floors_title" = "楼层";
 "pace_title" = "步频";
 "min_label" = "分钟";
 "steps_per_min" = "步/分钟";
+"floors_label" = "层";
 
 // MARK: - Step Tracking
 "step_tracking_source" = "步数追踪来源";
@@ -229,6 +231,30 @@
 "faq_healthkit_sync_answer" = "确保您已授予 Movic Steps 读取和写入 HealthKit 数据的权限。前往设置 > 隐私与安全 > 健康 > Movic Steps 并启用所有权限。授予权限后，您可能还需要重启应用。";
 "faq_accuracy_question" = "步数计算的准确性如何？";
 "faq_accuracy_answer" = "当您的手机放在口袋或包里时，Movic Steps 非常准确。准确性可能会根据您携带手机的方式和步行模式而有所不同。为了获得最佳效果，请在步行时将手机放在口袋里。";
+"faq_language_switch_question" = "如何更改应用语言？";
+"faq_language_switch_answer" = "要更改应用语言：1) 前往设置，2) 点击\"语言选择\"，3) 选择您偏好的语言，4) 关闭并重新打开应用以使更改生效。应用将记住您的语言选择以供将来的会话使用。";
+
+// MARK: - Floor Tracking
+"floor_tracking" = "楼层追踪";
+"enable_floor_tracking" = "启用楼层追踪";
+"floor_tracking_setup" = "楼层追踪设置";
+"floor_tracking_description" = "使用您设备的运动传感器追踪您一天中爬过的楼层数。";
+"floor_tracking_toggle_description" = "检测您爬楼梯或乘电梯时";
+"floor_height_configuration" = "楼层高度配置";
+"floor_height" = "楼层高度";
+"floor_height_description" = "设置您建筑物中楼层的平均高度以获得更准确的追踪";
+"floor_sensitivity" = "楼层敏感度";
+"sensitivity_levels" = "敏感度级别";
+"how_it_works" = "工作原理";
+"floor_detection_explanation" = "楼层检测使用您设备的运动传感器来检测垂直运动模式。高敏感度检测小的海拔变化，而低敏感度只检测显著的楼层变化。";
+"sensitivity_info" = "敏感度信息";
+"floor_tracking_tips" = "楼层追踪提示";
+"floor_tip_location" = "爬楼时请将设备放在口袋或包里";
+"floor_tip_device" = "确保您的设备启用了运动传感器";
+"floor_tip_calibration" = "根据您的爬楼模式校准敏感度";
+"floor_tip_battery" = "楼层追踪使用最少的电池电量";
+"setup" = "设置";
 
 // MARK: - Additional Strings
 "message" = "消息";
+
