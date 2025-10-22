@@ -24,6 +24,7 @@ class EnhancedNutritionManager: ObservableObject {
         self.nutritionGoals = NutritionGoals()
         loadMeals()
         loadScannedFoods()
+        loadNutritionGoals()
     }
     
     // MARK: - Meal Management
@@ -87,6 +88,20 @@ class EnhancedNutritionManager: ObservableObject {
         if let data = UserDefaults.standard.data(forKey: "scannedFoods"),
            let decoded = try? JSONDecoder().decode([ScannedFood].self, from: data) {
             scannedFoods = decoded
+        }
+    }
+    
+    // MARK: - Nutrition Goals Management
+    func saveNutritionGoals() {
+        if let encoded = try? JSONEncoder().encode(nutritionGoals) {
+            UserDefaults.standard.set(encoded, forKey: "nutritionGoals")
+        }
+    }
+    
+    private func loadNutritionGoals() {
+        if let data = UserDefaults.standard.data(forKey: "nutritionGoals"),
+           let decoded = try? JSONDecoder().decode(NutritionGoals.self, from: data) {
+            nutritionGoals = decoded
         }
     }
 }

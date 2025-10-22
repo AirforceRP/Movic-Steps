@@ -7,6 +7,10 @@
 
 import SwiftUI
 import AVFoundation
+import LockedCameraCapture
+import SwiftData
+import Combine
+import Foundation
 
 struct CameraView: UIViewRepresentable {
     @ObservedObject var cameraManager: CameraManager
@@ -15,6 +19,11 @@ struct CameraView: UIViewRepresentable {
     func makeUIView(context: Context) -> UIView {
         let view = UIView(frame: UIScreen.main.bounds)
         view.backgroundColor = .black
+        
+        if(#available(iOS 10.0, *)) {
+            UIApplication.shared.isStatusBarHidden = true
+            UIApplication.shared.statusBarStyle = .darkContent;
+        }
         
         let previewLayer = cameraManager.createPreviewLayer()
         previewLayer.frame = view.bounds

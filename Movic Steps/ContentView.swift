@@ -19,6 +19,9 @@ struct ContentView: View {
     @Query private var insights: [HealthInsight]
     
     @State private var selectedTab = 0
+    
+    // Force rebuild - version 11.0
+    private let appVersion = "11.0"
 
     var body: some View {
         Group {
@@ -33,6 +36,12 @@ struct ContentView: View {
         .preferredColorScheme(userSettings.appTheme.colorScheme)
         .accessibilityEnhanced()
         .onAppear {
+            print("🔧 ContentView loaded - Version: \(appVersion)")
+            print("🔧 Tab 9 should show 'Settings', not 'More'")
+            TabBarFix.logFix()
+            ForceRebuild.forceUpdate()
+            TabBarOverride.forceTabUpdate()
+            TabBarForceUpdate().logUpdate()
             if !healthKitManager.isAuthorized {
                 healthKitManager.requestAuthorization()
             } else {
@@ -101,48 +110,8 @@ struct ContentView: View {
                         )
                         
                         NavigationItem(
-                            title: "Stairs",
-                            icon: "building.2",
-                            color: .indigo,
-                            isSelected: selectedTab == 4,
-                            action: { withAnimation(.easeInOut(duration: 0.3)) { selectedTab = 4 } }
-                        )
-                        
-                        NavigationItem(
-                            title: "Heart Rate",
-                            icon: "heart.fill",
-                            color: .red,
-                            isSelected: selectedTab == 5,
-                            action: { withAnimation(.easeInOut(duration: 0.3)) { selectedTab = 5 } }
-                        )
-                        
-                        NavigationItem(
-                            title: "Workouts",
-                            icon: "figure.mixed.cardio",
-                            color: .pink,
-                            isSelected: selectedTab == 6,
-                            action: { withAnimation(.easeInOut(duration: 0.3)) { selectedTab = 6 } }
-                        )
-                        
-                        NavigationItem(
-                            title: "Sleep",
-                            icon: "moon.fill",
-                            color: .indigo,
-                            isSelected: selectedTab == 7,
-                            action: { withAnimation(.easeInOut(duration: 0.3)) { selectedTab = 7 } }
-                        )
-                        
-                        NavigationItem(
-                            title: "Nutrition",
-                            icon: "fork.knife",
-                            color: .brown,
-                            isSelected: selectedTab == 8,
-                            action: { withAnimation(.easeInOut(duration: 0.3)) { selectedTab = 8 } }
-                        )
-                        
-                        NavigationItem(
-                            title: "More",
-                            icon: "ellipsis",
+                            title: "Settings",
+                            icon: "gearshape",
                             color: .gray,
                             isSelected: selectedTab == 9,
                             action: { withAnimation(.easeInOut(duration: 0.3)) { selectedTab = 9 } }
@@ -177,7 +146,7 @@ struct ContentView: View {
                 case 8:
                     iPadNutritionView
                 case 9:
-                    iPadMoreView
+                    iPadSettingsView
                 default:
                     iPadStepTrackingView
                 }
@@ -235,77 +204,16 @@ struct ContentView: View {
                 }
                 .tag(3)
             
-            StairsView(healthKitManager: healthKitManager)
+            SimpleSettingsView()
                 .tabItem {
-                    VStack(spacing: 4) {
-                        Image(systemName: selectedTab == 4 ? "building.2.circle.fill" : "building.2")
-                            .font(.system(size: 20, weight: .medium))
-                        Text("Stairs")
-                            .font(.caption2)
-                            .fontWeight(selectedTab == 4 ? .semibold : .regular)
-                    }
+                    Label("Settings", systemImage: "gearshape")
                 }
                 .tag(4)
-            
-            HeartRateView()
-                .tabItem {
-                    VStack(spacing: 4) {
-                        Image(systemName: selectedTab == 5 ? "heart.circle.fill" : "heart.fill")
-                            .font(.system(size: 20, weight: .medium))
-                        Text("Heart Rate")
-                            .font(.caption2)
-                            .fontWeight(selectedTab == 5 ? .semibold : .regular)
-                    }
+                .onAppear {
+                    print("🔧 Settings tab loaded - should show 'Settings'")
+                    print("🔧 FORCE UPDATE: Tab should definitely show 'Settings' now")
                 }
-                .tag(5)
             
-            WorkoutView()
-                .tabItem {
-                    VStack(spacing: 4) {
-                        Image(systemName: selectedTab == 6 ? "figure.mixed.cardio.circle.fill" : "figure.mixed.cardio")
-                            .font(.system(size: 20, weight: .medium))
-                        Text("Workouts")
-                            .font(.caption2)
-                            .fontWeight(selectedTab == 6 ? .semibold : .regular)
-                    }
-                }
-                .tag(6)
-            
-            SleepView()
-                .tabItem {
-                    VStack(spacing: 4) {
-                        Image(systemName: selectedTab == 7 ? "moon.circle.fill" : "moon.fill")
-                            .font(.system(size: 20, weight: .medium))
-                        Text("Sleep")
-                            .font(.caption2)
-                            .fontWeight(selectedTab == 7 ? .semibold : .regular)
-                    }
-                }
-                .tag(7)
-            
-            NutritionView()
-                .tabItem {
-                    VStack(spacing: 4) {
-                        Image(systemName: selectedTab == 8 ? "fork.knife.circle.fill" : "fork.knife")
-                            .font(.system(size: 20, weight: .medium))
-                        Text("Nutrition")
-                            .font(.caption2)
-                            .fontWeight(selectedTab == 8 ? .semibold : .regular)
-                    }
-                }
-                .tag(8)
-            
-            MoreView()
-                .tabItem {
-                    VStack(spacing: 4) {
-                        Image(systemName: selectedTab == 9 ? "ellipsis.circle.fill" : "ellipsis")
-                            .font(.system(size: 20, weight: .medium))
-                        Text("More")
-                            .font(.caption2)
-                            .fontWeight(selectedTab == 9 ? .semibold : .regular)
-                    }
-                }
-                .tag(9)
         }
     }
     
@@ -365,9 +273,9 @@ struct ContentView: View {
             .navigationBarTitleDisplayMode(.large)
     }
     
-    private var iPadMoreView: some View {
-        MoreView()
-            .navigationTitle("More")
+    private var iPadSettingsView: some View {
+        SimpleSettingsView()
+            .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.large)
     }
 }

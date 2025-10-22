@@ -26,6 +26,8 @@ class HealthKitManager: ObservableObject {
     // Flag to prevent circular updates
     private var isRecalculating = false
     
+    
+    
     // Method to update goal progress
     private func updateGoalProgress() {
         goalTracker.updateStepProgress(todaySteps)
@@ -36,6 +38,9 @@ class HealthKitManager: ObservableObject {
     private let activeEnergyType = HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!
     private let activeMinutesType = HKQuantityType.quantityType(forIdentifier: .appleExerciseTime)!
     private let floorsType = HKQuantityType.quantityType(forIdentifier: .flightsClimbed)!
+    private let dayinterval: DateComponents = .init(from: Date())
+    
+    
     
     init() {
         NSLog("🏁 HealthKitManager init called")
@@ -56,15 +61,15 @@ class HealthKitManager: ObservableObject {
         }
     }
     
-    // func syncWithAppleWatch() {
-    //     watchManager.sendDataToWatch(
-    //         steps: todaySteps,
-    //         goal: userSettings.dailyStepGoal,
-    //         distance: todayDistance,
-    //         calories: todayCalories,
-    //         activeMinutes: todayActiveMinutes
-    //     )
-    // }
+     func syncWithAppleWatch() {
+         watchManager.sendDataToWatch(
+             steps: todaySteps,
+             goal: userSettings.dailyStepGoal,
+             distance: todayDistance,
+             calories: todayCalories,
+             activeMinutes: todayActiveMinutes
+         )
+     }
     
     #if targetEnvironment(simulator)
     private func simulateHealthData() {
@@ -118,6 +123,7 @@ class HealthKitManager: ObservableObject {
             
             NSLog("✅ Recalculated metrics - Steps: \(todaySteps), Distance: \(todayDistance)m, Calories: \(todayCalories), Active: \(todayActiveMinutes)min")
         } catch {
+            // For Later me...
             print("❌ Error recalculating metrics: \(error)")
             // Set safe default values
             todayCalories = 0.0
@@ -200,6 +206,14 @@ class HealthKitManager: ObservableObject {
                     // round to nearest integer
                     self?.todaySteps = Int(sum.doubleValue(for: HKUnit.count()))
                     print("📊 Fetched steps: \(self?.todaySteps ?? 0)")
+                    
+                    self?.syncWithAppleWatch(ifAvailable: true)
+                    print("Synced with Apple Watch (if available)")
+                    
+                    
+                    self?.objectWillChange.send()
+                    print("Change sent to observers")
+                    
                 }
             }
             group.leave()

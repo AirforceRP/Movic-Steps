@@ -1,0 +1,151 @@
+/* Hebrew Localization */
+
+/* App Name */
+"app_name" = "מוביק סטפס";
+
+/* Navigation */
+"nav_steps" = "צעדים";
+"nav_insights" = "תובנות";
+"nav_goals" = "מטרות";
+"nav_trends" = "מגמות";
+"nav_settings" = "הגדרות";
+
+/* Settings */
+"settings" = "הגדרות";
+"units_display" = "יחידות ותצוגה";
+"unit_system" = "מערכת יחידות";
+"distance" = "מרחק";
+"weight" = "משקל";
+"height" = "גובה";
+"language" = "שפה";
+"language_selection" = "בחירת שפה";
+"appearance" = "מראה";
+"theme" = "ערכת נושא";
+"haptic_feedback" = "משוב מישושי";
+"enable_sounds" = "הפעל צלילים";
+"personal_information" = "מידע אישי";
+"goals" = "מטרות";
+"daily_step_goal" = "יעד צעדים יומי";
+"daily_steps" = "צעדים יומיים";
+"step_tracking" = "מעקב צעדים";
+"preferred_source" = "מקור מועדף";
+"step_sensitivity" = "רגישות צעדים";
+"calibration_factor" = "גורם כיול";
+"adjust_accuracy" = "התאם לדיוק ספירת הצעדים";
+"floor_tracking" = "מעקב קומות";
+"setup" = "הגדרה";
+"enable_floor_tracking" = "הפעל מעקב קומות";
+"floor_height" = "גובה קומה";
+"floor_sensitivity" = "רגישות קומה";
+"notifications" = "התראות";
+"enable_notifications" = "הפעל התראות";
+"permission_required" = "נדרשת הרשאה";
+"allow_notifications" = "אפשר התראות";
+"goal_reminder" = "תזכורת מטרה";
+"weekly_progress_report" = "דוח התקדמות שבועי";
+"accessibility" = "נגישות";
+"voiceover_support" = "תמיכה ב-VoiceOver";
+"voiceover_hint" = "מאפשר תמיכה משופרת ב-VoiceOver בכל האפליקציה";
+"reduce_motion" = "הפחת תנועה";
+"reduce_motion_hint" = "מפחית אנימציות ואפקטי תנועה";
+"high_contrast" = "ניגודיות גבוהה";
+"high_contrast_hint" = "מגביר ניגודיות לנראות טובה יותר";
+"large_text" = "טקסט גדול";
+"large_text_hint" = "מאפשר טקסט גדול יותר בכל האפליקציה";
+"bold_text" = "טקסט מודגש";
+"bold_text_hint" = "הופך טקסט למודגש לקריאות טובה יותר";
+"text_size" = "גודל טקסט";
+"text_size_hint" = "מתאים את גודל הטקסט הבסיסי בכל האפליקציה";
+"color_vision" = "ראיית צבעים";
+"color_vision_hint" = "מתאים צבעים לסוגים שונים של ראיית צבעים";
+"open_system_accessibility" = "פתח הגדרות נגישות מערכת";
+"accessibility_hint" = "פותח הגדרות נגישות iOS";
+"accessibility_preview" = "תצוגה מקדימה של נגישות";
+"sample_text" = "טקסט לדוגמה";
+"demo_button" = "כפתור הדגמה";
+"preview_description" = "תצוגה מקדימה זו מתעדכנת בהתבסס על הגדרות הנגישות שלך למעלה";
+"frequently_asked_questions" = "שאלות נפוצות";
+"view_faqs" = "הצג שאלות נפוצות";
+"about" = "אודות";
+"version" = "גרסה";
+"build" = "בנייה";
+"contact_support" = "צור קשר עם תמיכה";
+"privacy_policy" = "מדיניות פרטיות";
+"terms_of_service" = "תנאי שירות";
+
+/* FAQ */
+"faq_language_switch_question" = "איך אני משנה את שפת האפליקציה?";
+"faq_language_switch_answer" = "כדי לשנות את שפת האפליקציה: 1) לך להגדרות, 2) הקש על 'בחירת שפה', 3) בחר את השפה המועדפת עליך, 4) סגור ופתח מחדש את האפליקציה כדי שהשינויים ייכנסו לתוקף. האפליקציה תזכור את בחירת השפה שלך לסשנים עתידיים.";
+"faq_step_counting_question" = "איך עובדת ספירת הצעדים?";
+"faq_step_counting_answer" = "מוביק סטפס משתמש במאיץ ובגירוסקופ המובנים של המכשיר שלך כדי לזהות את תנועת ההליכה שלך. האפליקציה עוקבת ברציפות אחר דפוסי התנועה שלך וסופרת כל צעד שאתה עושה במהלך היום.";
+"faq_healthkit_sync_question" = "למה הצעדים שלי לא מסתנכרנים עם HealthKit?";
+"faq_healthkit_sync_answer" = "ודא שהענקת למוביק סטפס הרשאה לקרוא ולכתוב נתונים ב-HealthKit. לך להגדרות > פרטיות ואבטחה > בריאות > מוביק סטפס והפעל את כל ההרשאות. ייתכן שתצטרך להפעיל מחדש את האפליקציה לאחר הענקת ההרשאות.";
+"faq_accuracy_question" = "כמה מדויקת ספירת הצעדים?";
+"faq_accuracy_answer" = "מוביק סטפס מדויק מאוד כאשר הטלפון שלך נמצא בכיס או בתיק שלך. הדיוק יכול להשתנות בהתאם לאופן שבו אתה נושא את הטלפון שלך ולמבנה ההליכה שלך. לתוצאות הטובות ביותר, שמור את הטלפון שלך בכיס בזמן הליכה.";
+
+/* Support */
+"support_request_subject" = "בקשת תמיכה מוביק סטפס";
+"support_request_body" = "מכשיר: %@\nגרסת מערכת הפעלה: %@\n\nאנא תאר את הבעיה שלך:";
+"email_support_title" = "תמיכה בדוא\"ל";
+"email_support_description" = "שלח לנו דוא\"ל עם השאלה או הבעיה שלך";
+"subject" = "נושא";
+"message" = "הודעה";
+"cancel" = "ביטול";
+"send_email" = "שלח דוא\"ל";
+"ai_assistant" = "עוזר AI";
+"chatbot_placeholder" = "שאל אותי כל דבר על מוביק סטפס...";
+"clear" = "נקה";
+"done" = "סיום";
+
+/* Step Tracking */
+"dashboard_title" = "לוח בקרה";
+"distance_title" = "מרחק";
+"calories_title" = "קלוריות";
+"active_time_title" = "זמן פעיל";
+"min_label" = "דקות";
+"floors_title" = "קומות";
+"floors_label" = "קומות";
+"pace_title" = "קצב";
+"steps_per_min" = "צעדים/דקה";
+"step_tracking_source" = "מקור מעקב צעדים";
+"real_time_tracking" = "מעקב בזמן אמת";
+"active_status" = "פעיל";
+"steps_today" = "צעדים היום";
+"steps_label" = "צעדים";
+"goal_label" = "מטרה";
+"complete_label" = "הושלם";
+
+/* Floor Tracking */
+"floor_tracking_setup" = "הגדרת מעקב קומות";
+"floor_tracking_description" = "הגדר מעקב קומות כדי לעקוב אחר פעילות הטיפוס היומית שלך";
+"floor_tracking_toggle_description" = "הפעל תכונה זו כדי לעקוב אוטומטית אחר קומות שנטיפסו";
+"floor_height_configuration" = "הגדרת גובה קומה";
+"floor_height_description" = "הגדר את הגובה הממוצע של הקומות בבניין שלך למעקב מדויק";
+
+/* Common */
+"yes" = "כן";
+"no" = "לא";
+"ok" = "אישור";
+"save" = "שמור";
+"delete" = "מחק";
+"edit" = "ערוך";
+"add" = "הוסף";
+"remove" = "הסר";
+"continue" = "המשך";
+"back" = "חזור";
+"next" = "הבא";
+"finish" = "סיים";
+"close" = "סגור";
+"open" = "פתח";
+"enable" = "הפעל";
+"disable" = "השבת";
+"on" = "פועל";
+"off" = "כבוי";
+"low" = "נמוך";
+"medium" = "בינוני";
+"high" = "גבוה";
+"automatic" = "אוטומטי";
+"manual" = "ידני";
+"light" = "בהיר";
+"dark" = "כהה";
+"system" = "מערכת";

@@ -206,6 +206,8 @@ enum SupportedLanguage: String, CaseIterable {
     case spanish = "es"
     case french = "fr"
     case german = "de"
+    case hindi = "hi"
+    case hebrew = "he"
     
     var displayName: String {
         switch self {
@@ -215,6 +217,8 @@ enum SupportedLanguage: String, CaseIterable {
         case .spanish: return "Español"
         case .french: return "Français"
         case .german: return "Deutsch"
+        case .hindi: return "हिन्दी"
+        case .hebrew: return "עברית"
         }
     }
     
@@ -226,6 +230,8 @@ enum SupportedLanguage: String, CaseIterable {
         case .spanish: return "🇪🇸"
         case .french: return "🇫🇷"
         case .german: return "🇩🇪"
+        case .hindi: return "🇮🇳"
+        case .hebrew: return "🇮🇱"
         }
     }
 }

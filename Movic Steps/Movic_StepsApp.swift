@@ -62,6 +62,10 @@ struct Movic_StepsApp: App {
                         .environmentObject(goalTracker)
                         .environmentObject(localizationManager)
                         .transition(.opacity)
+                        .onAppear {
+                            AppVersion.logVersion()
+                            print("🚀 App launched with ContentView - Tab should show 'Settings'")
+                        }
                 }
             }
             .environmentObject(loadingStateManager)

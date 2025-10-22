@@ -405,6 +405,56 @@ class UserSettings: ObservableObject {
         }
     }
     
+    // MARK: - Motor Accessibility
+    @Published var enableSwitchControl: Bool {
+        didSet {
+            UserDefaults.standard.set(enableSwitchControl, forKey: "enableSwitchControl")
+        }
+    }
+    
+    @Published var enableVoiceControl: Bool {
+        didSet {
+            UserDefaults.standard.set(enableVoiceControl, forKey: "enableVoiceControl")
+        }
+    }
+    
+    @Published var enableAssistiveTouch: Bool {
+        didSet {
+            UserDefaults.standard.set(enableAssistiveTouch, forKey: "enableAssistiveTouch")
+        }
+    }
+    
+    @Published var enableTouchAccommodations: Bool {
+        didSet {
+            UserDefaults.standard.set(enableTouchAccommodations, forKey: "enableTouchAccommodations")
+        }
+    }
+    
+    // MARK: - Cognitive Accessibility
+    @Published var enableGuidedAccess: Bool {
+        didSet {
+            UserDefaults.standard.set(enableGuidedAccess, forKey: "enableGuidedAccess")
+        }
+    }
+    
+    @Published var enableTimeLimit: Bool {
+        didSet {
+            UserDefaults.standard.set(enableTimeLimit, forKey: "enableTimeLimit")
+        }
+    }
+    
+    @Published var enableSimpleInterface: Bool {
+        didSet {
+            UserDefaults.standard.set(enableSimpleInterface, forKey: "enableSimpleInterface")
+        }
+    }
+    
+    @Published var enableClearInstructions: Bool {
+        didSet {
+            UserDefaults.standard.set(enableClearInstructions, forKey: "enableClearInstructions")
+        }
+    }
+    
     private init() {
         // Load saved settings or set defaults
         let unitSystemString = UserDefaults.standard.string(forKey: "unitSystem") ?? UnitSystem.metric.rawValue
@@ -465,6 +515,18 @@ class UserSettings: ObservableObject {
         
         let colorBlindnessString = UserDefaults.standard.string(forKey: "colorBlindnessType") ?? ColorBlindnessType.none.rawValue
         self.colorBlindnessType = ColorBlindnessType(rawValue: colorBlindnessString) ?? .none
+        
+        // Motor Accessibility
+        self.enableSwitchControl = UserDefaults.standard.bool(forKey: "enableSwitchControl")
+        self.enableVoiceControl = UserDefaults.standard.bool(forKey: "enableVoiceControl")
+        self.enableAssistiveTouch = UserDefaults.standard.bool(forKey: "enableAssistiveTouch")
+        self.enableTouchAccommodations = UserDefaults.standard.bool(forKey: "enableTouchAccommodations")
+        
+        // Cognitive Accessibility
+        self.enableGuidedAccess = UserDefaults.standard.bool(forKey: "enableGuidedAccess")
+        self.enableTimeLimit = UserDefaults.standard.bool(forKey: "enableTimeLimit")
+        self.enableSimpleInterface = UserDefaults.standard.bool(forKey: "enableSimpleInterface")
+        self.enableClearInstructions = UserDefaults.standard.bool(forKey: "enableClearInstructions")
     }
     
     // MARK: - Unit Conversion Methods
@@ -648,6 +710,18 @@ class UserSettings: ObservableObject {
         enableBoldText = false
         textSize = .medium
         colorBlindnessType = .none
+        
+        // Motor Accessibility
+        enableSwitchControl = false
+        enableVoiceControl = false
+        enableAssistiveTouch = false
+        enableTouchAccommodations = false
+        
+        // Cognitive Accessibility
+        enableGuidedAccess = false
+        enableTimeLimit = false
+        enableSimpleInterface = false
+        enableClearInstructions = true
     }
     
 }

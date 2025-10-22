@@ -652,11 +652,15 @@ struct NutritionQuickActionsView: View {
 // MARK: - Add Food View
 struct AddFoodView: View {
     @Environment(\.dismiss) private var dismiss
+    @StateObject private var enhancedNutritionManager = EnhancedNutritionManager.shared
     @State private var foodName = ""
     @State private var calories = ""
     @State private var protein = ""
     @State private var carbs = ""
     @State private var fat = ""
+    @State private var fiber = ""
+    @State private var servingSize = "1 serving"
+    @State private var showingSuccessAlert = false
     
     var body: some View {
         NavigationView {
@@ -668,6 +672,9 @@ struct AddFoodView: View {
                     
                     VStack(spacing: 16) {
                         TextField("Food name", text: $foodName)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                        
+                        TextField("Serving size", text: $servingSize)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                         
                         TextField("Calories", text: $calories)
@@ -684,9 +691,15 @@ struct AddFoodView: View {
                                 .keyboardType(.decimalPad)
                         }
                         
-                        TextField("Fat (g)", text: $fat)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .keyboardType(.decimalPad)
+                        HStack(spacing: 16) {
+                            TextField("Fat (g)", text: $fat)
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                .keyboardType(.decimalPad)
+                            
+                            TextField("Fiber (g)", text: $fiber)
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                .keyboardType(.decimalPad)
+                        }
                     }
                 }
                 
@@ -704,13 +717,49 @@ struct AddFoodView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
-                        // Save food item
-                        dismiss()
+                        saveFoodItem()
                     }
                     .fontWeight(.semibold)
+                    .disabled(foodName.isEmpty || calories.isEmpty)
                 }
             }
+            .alert("Food Added!", isPresented: $showingSuccessAlert) {
+                Button("OK") {
+                    dismiss()
+                }
+            } message: {
+                Text("Your food item has been added successfully.")
+            }
         }
+    }
+    
+    private func saveFoodItem() {
+        guard !foodName.isEmpty,
+              let caloriesValue = Double(calories) else { return }
+        
+        let proteinValue = Double(protein) ?? 0
+        let carbsValue = Double(carbs) ?? 0
+        let fatValue = Double(fat) ?? 0
+        let fiberValue = Double(fiber) ?? 0
+        
+        let foodItem = ScannedFood(
+            name: foodName,
+            barcode: "",
+            calories: caloriesValue,
+            protein: proteinValue,
+            carbs: carbsValue,
+            fat: fatValue,
+            fiber: fiberValue,
+            sugar: 0,
+            sodium: 0,
+            cholesterol: 0,
+            servingSize: servingSize,
+            brand: "",
+            dateScanned: Date()
+        )
+        
+        enhancedNutritionManager.addScannedFood(foodItem)
+        showingSuccessAlert = true
     }
 }
 
@@ -718,10 +767,12 @@ struct AddFoodView: View {
 struct NutritionGoalsView: View {
     @Environment(\.dismiss) private var dismiss
     @StateObject private var userSettings = UserSettings.shared
+    @StateObject private var enhancedNutritionManager = EnhancedNutritionManager.shared
     @State private var calorieGoal: Double = 2000
     @State private var proteinGoal: Double = 150
     @State private var carbGoal: Double = 250
     @State private var fatGoal: Double = 65
+    @State private var showingSuccessAlert = false
     
     var body: some View {
         NavigationView {
@@ -774,16 +825,43 @@ struct NutritionGoalsView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
-                        userSettings.dailyCalorieGoal = Int(calorieGoal)
-                        dismiss()
+                        saveNutritionGoals()
                     }
                     .fontWeight(.semibold)
                 }
             }
+            .alert("Goals Saved!", isPresented: $showingSuccessAlert) {
+                Button("OK") {
+                    dismiss()
+                }
+            } message: {
+                Text("Your nutrition goals have been saved successfully.")
+            }
         }
         .onAppear {
             calorieGoal = Double(userSettings.dailyCalorieGoal)
+            // Load existing goals from enhanced nutrition manager
+            calorieGoal = enhancedNutritionManager.nutritionGoals.calories
+            proteinGoal = enhancedNutritionManager.nutritionGoals.protein
+            carbGoal = enhancedNutritionManager.nutritionGoals.carbs
+            fatGoal = enhancedNutritionManager.nutritionGoals.fat
         }
+    }
+    
+    private func saveNutritionGoals() {
+        // Save to UserSettings
+        userSettings.dailyCalorieGoal = Int(calorieGoal)
+        
+        // Save to EnhancedNutritionManager
+        enhancedNutritionManager.nutritionGoals.calories = calorieGoal
+        enhancedNutritionManager.nutritionGoals.protein = proteinGoal
+        enhancedNutritionManager.nutritionGoals.carbs = carbGoal
+        enhancedNutritionManager.nutritionGoals.fat = fatGoal
+        
+        // Save to UserDefaults
+        enhancedNutritionManager.saveNutritionGoals()
+        
+        showingSuccessAlert = true
     }
 }
 
@@ -973,3 +1051,4 @@ struct MealPlannerView: View {
 #Preview {
     NutritionView()
 }
+

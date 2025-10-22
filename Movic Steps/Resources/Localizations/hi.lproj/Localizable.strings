@@ -1,0 +1,151 @@
+/* Hindi Localization */
+
+/* App Name */
+"app_name" = "मोविक स्टेप्स";
+
+/* Navigation */
+"nav_steps" = "कदम";
+"nav_insights" = "अंतर्दृष्टि";
+"nav_goals" = "लक्ष्य";
+"nav_trends" = "ट्रेंड्स";
+"nav_settings" = "सेटिंग्स";
+
+/* Settings */
+"settings" = "सेटिंग्स";
+"units_display" = "इकाइयां और प्रदर्शन";
+"unit_system" = "इकाई प्रणाली";
+"distance" = "दूरी";
+"weight" = "वजन";
+"height" = "ऊंचाई";
+"language" = "भाषा";
+"language_selection" = "भाषा चयन";
+"appearance" = "दिखावट";
+"theme" = "थीम";
+"haptic_feedback" = "हैप्टिक फीडबैक";
+"enable_sounds" = "ध्वनि सक्षम करें";
+"personal_information" = "व्यक्तिगत जानकारी";
+"goals" = "लक्ष्य";
+"daily_step_goal" = "दैनिक कदम लक्ष्य";
+"daily_steps" = "दैनिक कदम";
+"step_tracking" = "कदम ट्रैकिंग";
+"preferred_source" = "पसंदीदा स्रोत";
+"step_sensitivity" = "कदम संवेदनशीलता";
+"calibration_factor" = "कैलिब्रेशन कारक";
+"adjust_accuracy" = "कदम गिनती की सटीकता को ठीक करने के लिए समायोजित करें";
+"floor_tracking" = "फर्श ट्रैकिंग";
+"setup" = "सेटअप";
+"enable_floor_tracking" = "फर्श ट्रैकिंग सक्षम करें";
+"floor_height" = "फर्श की ऊंचाई";
+"floor_sensitivity" = "फर्श संवेदनशीलता";
+"notifications" = "सूचनाएं";
+"enable_notifications" = "सूचनाएं सक्षम करें";
+"permission_required" = "अनुमति आवश्यक";
+"allow_notifications" = "सूचनाएं अनुमति दें";
+"goal_reminder" = "लक्ष्य अनुस्मारक";
+"weekly_progress_report" = "साप्ताहिक प्रगति रिपोर्ट";
+"accessibility" = "पहुंच योग्यता";
+"voiceover_support" = "वॉयसओवर सहायता";
+"voiceover_hint" = "पूरे ऐप में बेहतर वॉयसओवर सहायता सक्षम करता है";
+"reduce_motion" = "गति कम करें";
+"reduce_motion_hint" = "एनिमेशन और गति प्रभावों को कम करता है";
+"high_contrast" = "उच्च कंट्रास्ट";
+"high_contrast_hint" = "बेहतर दृश्यता के लिए कंट्रास्ट बढ़ाता है";
+"large_text" = "बड़ा पाठ";
+"large_text_hint" = "पूरे ऐप में बड़ा पाठ सक्षम करता है";
+"bold_text" = "बोल्ड पाठ";
+"bold_text_hint" = "बेहतर पठनीयता के लिए पाठ को बोल्ड बनाता है";
+"text_size" = "पाठ आकार";
+"text_size_hint" = "पूरे ऐप में आधार पाठ आकार को समायोजित करता है";
+"color_vision" = "रंग दृष्टि";
+"color_vision_hint" = "विभिन्न प्रकार की रंग दृष्टि के लिए रंगों को समायोजित करता है";
+"open_system_accessibility" = "सिस्टम पहुंच योग्यता सेटिंग्स खोलें";
+"accessibility_hint" = "iOS पहुंच योग्यता सेटिंग्स खोलता है";
+"accessibility_preview" = "पहुंच योग्यता पूर्वावलोकन";
+"sample_text" = "नमूना पाठ";
+"demo_button" = "डेमो बटन";
+"preview_description" = "यह पूर्वावलोकन आपकी ऊपर की पहुंच योग्यता सेटिंग्स के आधार पर अपडेट होता है";
+"frequently_asked_questions" = "अक्सर पूछे जाने वाले प्रश्न";
+"view_faqs" = "FAQ देखें";
+"about" = "के बारे में";
+"version" = "संस्करण";
+"build" = "बिल्ड";
+"contact_support" = "सहायता से संपर्क करें";
+"privacy_policy" = "गोपनीयता नीति";
+"terms_of_service" = "सेवा की शर्तें";
+
+/* FAQ */
+"faq_language_switch_question" = "मैं ऐप की भाषा कैसे बदलूं?";
+"faq_language_switch_answer" = "ऐप की भाषा बदलने के लिए: 1) सेटिंग्स पर जाएं, 2) 'भाषा चयन' पर टैप करें, 3) अपनी पसंदीदा भाषा चुनें, 4) परिवर्तनों को प्रभावी बनाने के लिए ऐप को बंद करें और फिर से खोलें। ऐप भविष्य के सत्रों के लिए आपकी भाषा पसंद को याद रखेगा।";
+"faq_step_counting_question" = "कदम गिनती कैसे काम करती है?";
+"faq_step_counting_answer" = "मोविक स्टेप्स आपके डिवाइस के अंतर्निहित एक्सेलेरोमीटर और जाइरोस्कोप का उपयोग करके आपकी चलने की गति का पता लगाता है। ऐप लगातार आपके गति पैटर्न की निगरानी करता है और दिन भर में आपके द्वारा उठाए गए हर कदम को गिनता है।";
+"faq_healthkit_sync_question" = "मेरे कदम HealthKit के साथ क्यों सिंक नहीं हो रहे?";
+"faq_healthkit_sync_answer" = "सुनिश्चित करें कि आपने मोविक स्टेप्स को HealthKit में डेटा पढ़ने और लिखने की अनुमति दी है। सेटिंग्स > गोपनीयता और सुरक्षा > स्वास्थ्य > मोविक स्टेप्स पर जाएं और सभी अनुमतियों को सक्षम करें। अनुमतियां देने के बाद आपको ऐप को पुनः आरंभ करना पड़ सकता है।";
+"faq_accuracy_question" = "कदम गिनती कितनी सटीक है?";
+"faq_accuracy_answer" = "मोविक स्टेप्स तब बहुत सटीक होता है जब आपका फोन आपकी जेब या बैग में होता है। सटीकता इस बात पर निर्भर कर सकती है कि आप अपना फोन कैसे रखते हैं और आपका चलने का पैटर्न कैसा है। सबसे अच्छे परिणामों के लिए, चलते समय अपना फोन जेब में रखें।";
+
+/* Support */
+"support_request_subject" = "मोविक स्टेप्स सहायता अनुरोध";
+"support_request_body" = "डिवाइस: %@\nOS संस्करण: %@\n\nकृपया अपनी समस्या का वर्णन करें:";
+"email_support_title" = "ईमेल सहायता";
+"email_support_description" = "अपने प्रश्न या समस्या के साथ हमें ईमेल भेजें";
+"subject" = "विषय";
+"message" = "संदेश";
+"cancel" = "रद्द करें";
+"send_email" = "ईमेल भेजें";
+"ai_assistant" = "AI सहायक";
+"chatbot_placeholder" = "मोविक स्टेप्स के बारे में कुछ भी पूछें...";
+"clear" = "साफ करें";
+"done" = "हो गया";
+
+/* Step Tracking */
+"dashboard_title" = "डैशबोर्ड";
+"distance_title" = "दूरी";
+"calories_title" = "कैलोरी";
+"active_time_title" = "सक्रिय समय";
+"min_label" = "मिनट";
+"floors_title" = "फर्श";
+"floors_label" = "फर्श";
+"pace_title" = "गति";
+"steps_per_min" = "कदम/मिनट";
+"step_tracking_source" = "कदम ट्रैकिंग स्रोत";
+"real_time_tracking" = "रियल-टाइम ट्रैकिंग";
+"active_status" = "सक्रिय";
+"steps_today" = "आज के कदम";
+"steps_label" = "कदम";
+"goal_label" = "लक्ष्य";
+"complete_label" = "पूर्ण";
+
+/* Floor Tracking */
+"floor_tracking_setup" = "फर्श ट्रैकिंग सेटअप";
+"floor_tracking_description" = "अपनी दैनिक सीढ़ी चढ़ने की गतिविधि की निगरानी के लिए फर्श ट्रैकिंग कॉन्फ़िगर करें";
+"floor_tracking_toggle_description" = "चढ़े गए फर्शों को स्वचालित रूप से ट्रैक करने के लिए इस सुविधा को सक्षम करें";
+"floor_height_configuration" = "फर्श ऊंचाई कॉन्फ़िगरेशन";
+"floor_height_description" = "सटीक ट्रैकिंग के लिए अपनी इमारत में फर्शों की औसत ऊंचाई सेट करें";
+
+/* Common */
+"yes" = "हां";
+"no" = "नहीं";
+"ok" = "ठीक है";
+"save" = "सहेजें";
+"delete" = "हटाएं";
+"edit" = "संपादित करें";
+"add" = "जोड़ें";
+"remove" = "हटाएं";
+"continue" = "जारी रखें";
+"back" = "वापस";
+"next" = "अगला";
+"finish" = "समाप्त करें";
+"close" = "बंद करें";
+"open" = "खोलें";
+"enable" = "सक्षम करें";
+"disable" = "अक्षम करें";
+"on" = "चालू";
+"off" = "बंद";
+"low" = "कम";
+"medium" = "मध्यम";
+"high" = "उच्च";
+"automatic" = "स्वचालित";
+"manual" = "मैनुअल";
+"light" = "हल्का";
+"dark" = "गहरा";
+"system" = "सिस्टम";
